@@ -28,7 +28,8 @@ URI　：　https://github.com/IotaTech-Info/IotaJava_G4.git
 ![image](https://user-images.githubusercontent.com/100652381/158002611-ab9fde2b-ad13-4414-b491-79cd97b5fc09.png)
 
 ６、ディレクトリにEclipseのワークスペースを指定して、次へを押下する
-※　ワークスペース　＋　プロジェクト名称
+※　ワークスペース　＋　プロジェクト名称(IotaJava_G4)
+
 
 ![image](https://user-images.githubusercontent.com/100652381/158002631-13a30657-253f-4291-a1ab-27a6214972ba.png)
 
