@@ -41,8 +41,8 @@ URI　：　https://github.com/IotaTech-Info/IotaJava_G4.git
 
 ![image](https://user-images.githubusercontent.com/100652381/158002693-b6801d4d-2f13-4545-88d3-f4411b271b35.png)
 
-９、プロジェクト名称に「IotaJava_G3」を設定して、次へ
-
+９、プロジェクト名称に「IotaJava_G4」を設定して、次へ
+   ※デフォルトロケーションをチェックしないでください。
 ![image](https://user-images.githubusercontent.com/100652381/158002721-fcae4371-9cf0-4ec5-b2c3-53b479532068.png)
 
 １０、完了　
