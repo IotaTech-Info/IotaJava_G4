@@ -22,12 +22,8 @@ public class JavaHomeWork01 {
 
 
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
-<<<<<<< HEAD
 //		booleanに設定可能の値はtrueとfalse。
 		
-=======
- 
->>>>>>> branch 'chen_sihong' of https://github.com/IotaTech-Info/IotaJava_G4.git
 	} 
 
 }
