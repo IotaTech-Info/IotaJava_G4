@@ -22,8 +22,8 @@ public class JavaHomeWork01 {
 
 
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
-//		booleanに設定可能の値はtrueとfalse
- 
+//		booleanに設定可能の値はtrueとfalse。
+		
 	} 
 
 }
