@@ -23,8 +23,8 @@ public class JavaHomeWork01 {
 //		a = a > 10? 11:0;
 //		System.out.println(a);
 //		实际上就是
-//		if a > 10;{
-//		a = 11}
+//		if （a > 10）{
+//		a = 11;}
 //		else {a = 0}
 
 		
