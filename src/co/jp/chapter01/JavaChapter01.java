@@ -68,7 +68,7 @@ public class JavaChapter01 {
 		// true →　false
 		//false →　true
 		
-		// test1
+		// test12
 	
 		
 		
