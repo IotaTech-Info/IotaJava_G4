@@ -19,16 +19,17 @@ public class JavaHomeWork01 {
 			System.out.println("質問２: a = 0");
 
 		// 質問３︓変数値を⽐較する演算⼦は = or == ?
+		// ==です
+		System.out.println("質問３: == ");
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
 		int x = 3;
 		int y = 5;
-		boolean t = x == y;
-		System.out.println("質問３:" + t);
 		System.out.println("質問４:");
 		boolean z = x > y;
 		System.out.println(z);
 		boolean w = x < y;
 		System.out.println(w);
+		//質問４:false true
 	}
 
 }
