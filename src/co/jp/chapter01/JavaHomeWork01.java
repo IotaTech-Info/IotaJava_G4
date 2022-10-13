@@ -10,6 +10,7 @@ public class JavaHomeWork01 {
 		// int i = 10;
 		// int n = i%5;
 		
+		
 
 		// 回答：n=0
 
