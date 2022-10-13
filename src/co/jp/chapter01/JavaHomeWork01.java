@@ -22,6 +22,7 @@ public class JavaHomeWork01 {
 
 		//『ture』と『false』です。
 		
+		
 	}
 
 }
