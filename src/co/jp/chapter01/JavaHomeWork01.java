@@ -9,7 +9,7 @@ public class JavaHomeWork01 {
 		// 質問１
 		// int i = 10;
 		// int n = i%5;
-
+		
 		// N = 0
 
 		// 質問２︓ 右の式を解釈してください: a = a > 10 ? 11 : 0;
