@@ -23,6 +23,6 @@ public class JavaHomeWork02 {
 //		質問5
 		
 		a
-		
+		 
 	}
 }
