@@ -27,7 +27,8 @@ public class JavaHomeWork02 {
 //	質問５
 //	a
 		
-		
+
+
 		
 	
 	}
