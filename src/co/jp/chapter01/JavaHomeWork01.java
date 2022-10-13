@@ -10,7 +10,6 @@ public class JavaHomeWork01 {
 		// int i = 10;
 		// int n = i%5;
 		// 回答：n=0
-
 		// 質問２︓ 右の式を解釈してください: a = a > 10 ? 11 : 0;
 		// 回答：a > 10がtrueならa=11、falseならa=0
 
