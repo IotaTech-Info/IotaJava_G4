@@ -26,7 +26,6 @@ public class JavaHomeWork01 {
 
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
 		// boolean变数可能的值是「true」或「false」。
-		System.out.println("test");
 
 	}
 
