@@ -6,6 +6,7 @@ public class JavaHomeWork01 {
 
 	public static void main(String[] args) {
 		
+		// homework
 		// 質問０１
 		// int i = 10;
 		// int n = i%5;
