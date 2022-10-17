@@ -7,6 +7,7 @@ public class JavaHomeWork03 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
+		//homework
 		// 質問1：成績ランキング判断を作成する「90以上：A；80‐90：B；70‐80：C；60-70：D；60以下：E」
 		
 		// 回答：
