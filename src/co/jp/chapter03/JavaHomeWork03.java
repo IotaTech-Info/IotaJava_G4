@@ -52,6 +52,7 @@ public class JavaHomeWork03 {
 		// 質問3:输出菱形,环状菱形
 		
 		// 回答：
+		
 		// 输出菱形
 		int l;
 		
