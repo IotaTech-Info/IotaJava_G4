@@ -41,16 +41,24 @@ public class JavaHomeWork04 {
 	public void question7() {
 		int plus = 0;
 		int multi = 1;
-		int [][] array2d = new int[][] {
-				{1,2,3,4},
-				{21,22,23,24}
+		int [][] array1 = new int[][] {
+				{3,4},
+				{23,24}
 		};
-		for(int []out : array) {
-			for( int item : out) {
-				plus += item;
-				multi *= item;
+		int [][] array2 = new int[][] {
+			{1,2},
+			{3,4}
+	};
+	 	int [][] plus = new int[2][2]; 
+	 	int [][] multi = new int[2][2]; 
+	 	
+		for( int i =0 ; i < 2 ; i++) {
+			for( int j =0 ; j < 2 ; j++) {
+				plus[i][j] = array1[i][j] + array2[i][j];
+				multi[i][j] = array1[i][j] * array2[i][j];
 			}
-			System.out.println("和"+ plus + "積" + multi);
+			System.out.println(plus);
+			System.out.println(multi);
 		}
 	}
 }
