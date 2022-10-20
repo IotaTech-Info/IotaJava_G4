@@ -22,6 +22,7 @@ public class JavaHomeWork03 {
 		}
 		
 		System.out.println("");
+		
 
 		System.out.println("質問2︓日本のコインを１円、５円、１０円、１００円、５００円があります。３３４０円のコイン数をもとめください。");
 		int coin = 3340;
