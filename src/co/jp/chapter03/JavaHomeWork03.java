@@ -91,6 +91,7 @@ public class JavaHomeWork03 {
 //		System.out.print("10円は" + coin10 +"枚,");
 //		System.out.print("5円は" + coin5 +"枚,");
 //		System.out.print("1円は" + coin1 +"枚です");
+		
 					
 
 
