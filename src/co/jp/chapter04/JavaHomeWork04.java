@@ -6,22 +6,22 @@ public class JavaHomeWork04 {
 		// TODO 自動生成されたメソッド・スタブ
 
 //		設問 1
-		0, 0, 0, 0
-//		
-//		設問 2
-		5, 6 
-//		設問 3
-		0, 0, 0
-		0, 0, 0
-//		設問 4
-		配列の中身を出力する
+//		0, 0, 0, 0
+////		
+////		設問 2
+//		5, 6 
+////		設問 3
+//		0, 0, 0
+//		0, 0, 0
+////		設問 4
+//		配列の中身を出力する
 //		設問 5
 		int[] array_5 = new int[] {1, 3, 5, 7, 100, 0, 1};
 		int len;
 			for(int i = 0; i < array_5.length; i++) {
 				for(int j = i; j < array_5.length; j++) {
 					if (j != i) {
-						if (array_5[i] < array_5[j]) {
+						if (array_5[i] >= array_5[j]) {
 							int temp = array_5[j];
 							array_5[j] = array_5[i];
 							array_5[i] = temp;
@@ -29,8 +29,8 @@ public class JavaHomeWork04 {
 					}
 				}
 			}
-			System.out.println("max : " + array_5[0]);
-			System.out.println("min : " + array_5[array_5.length-1]);
+			System.out.println("max : " + array_5[array_5.length-1]);
+			System.out.println("min : " + array_5[0]);
 			System.out.println("最小桁数 : " + Integer.toString(array_5[array_5.length-1]).length());
 
 //		設問 6
