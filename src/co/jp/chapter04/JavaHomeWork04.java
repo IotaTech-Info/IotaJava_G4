@@ -17,7 +17,6 @@ public class JavaHomeWork04 {
 //		配列の中身を出力する
 //		設問 5
 		int[] array_5 = new int[] {1, 3, 5, 7, 100, 0, 1};
-		int len;
 			for(int i = 0; i < array_5.length; i++) {
 				for(int j = i; j < array_5.length; j++) {
 					if (j != i) {
@@ -31,7 +30,7 @@ public class JavaHomeWork04 {
 			}
 			System.out.println("max : " + array_5[array_5.length-1]);
 			System.out.println("min : " + array_5[0]);
-			System.out.println("最小桁数 : " + Integer.toString(array_5[array_5.length-1]).length());
+			System.out.println("最小桁数 : " + Integer.toString(array_5[0]).length());
 
 //		設問 6
 			int[] array_1 = new int[4];
