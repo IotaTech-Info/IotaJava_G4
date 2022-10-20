@@ -72,25 +72,25 @@ public class JavaHomeWork03 {
 
 		// 質問２︓⽇本のコインを１円、５円、１０円、１００円、５００円があります。３３４7 円のコイン数をもとめください。
 
-		int money = 3347;
-		int coin500 = 0; 
-		int coin100 = 0;
-		int coin10 = 0;
-		int coin5 = 0;
-		int coin1 = 0;
-		
-		
-		coin500 = money / 500;
-		coin100 = money % 500 / 100;
-		coin10 = money % 500 % 100  / 10;
-		coin5 = money % 500 % 100 %10 / 5;
-		coin1 = money % 500 % 100 % 10 % 5 / 1;
-		
-		System.out.print("500円は" + coin500 +"枚,");
-		System.out.print("100円は" + coin100 +"枚,");
-		System.out.print("10円は" + coin10 +"枚,");
-		System.out.print("5円は" + coin5 +"枚,");
-		System.out.print("1円は" + coin1 +"枚です");
+//		int money = 3347;
+//		int coin500 = 0; 
+//		int coin100 = 0;
+//		int coin10 = 0;
+//		int coin5 = 0;
+//		int coin1 = 0;
+//		
+//		
+//		coin500 = money / 500;
+//		coin100 = money % 500 / 100;
+//		coin10 = money % 500 % 100  / 10;
+//		coin5 = money % 500 % 100 %10 / 5;
+//		coin1 = money % 500 % 100 % 10 % 5 / 1;
+//		
+//		System.out.print("500円は" + coin500 +"枚,");
+//		System.out.print("100円は" + coin100 +"枚,");
+//		System.out.print("10円は" + coin10 +"枚,");
+//		System.out.print("5円は" + coin5 +"枚,");
+//		System.out.print("1円は" + coin1 +"枚です");
 					
 
 
