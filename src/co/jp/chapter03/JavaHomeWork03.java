@@ -1,9 +1,5 @@
 package co.jp.chapter03;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class JavaHomeWork03 {
 
 	public static void main(String[] args) {
@@ -28,21 +24,24 @@ public class JavaHomeWork03 {
 		
 		int t=3340;
 		int r=t;
-		List<Integer> coin_list = new ArrayList <Integer>(Arrays.asList(500,100,10,5,1));
-		List<Integer> result=new ArrayList<Integer>();
+		int[] coin_list = new int[] {500,100,10,5,1};
+		int[] result=new int[5];
+		int i=0;
 		for (Integer coin:coin_list) {
 			if (r!=0) {
-				result.add(r/coin);
+				result[i]=r/coin;
 				r=r%coin;
-			}else {
+				i++;
+			}
+			else {
 				break;
 			}
 		}
 		
 		int sum = 0; 
-	    for (int i : result) {
-	         sum = sum + i;}
-	    //result.forEach(System.out::println);
+	    for (int c : result) {
+	         sum = sum + c;
+	    }
 	    
 		System.out.println("コインの(最小)枚数:"+sum);
 		
