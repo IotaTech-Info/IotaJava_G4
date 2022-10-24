@@ -168,5 +168,6 @@ public class JavaHomeWork05 {
 			arr[i]=(int)(Math.random()*max);
 		}
 		return arr;
+		
 	}
 }
