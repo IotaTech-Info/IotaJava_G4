@@ -54,6 +54,7 @@ public class JavaHomeWork03 {
 		System.out.println("1円は"+c1+"　5円は"+c5+"　10円は"+c10+"　"
 				+ "　100円は"+c100+"　500円は"+c500+"枚あります");
 		
+		
 	}
 	
 }
