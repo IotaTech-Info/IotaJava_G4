@@ -117,6 +117,7 @@ public class JavaHomeWork04 {
 				System.out.print(inner);
 			}
 			System.out.println("\n");
+			
 		}
 	}
 }
