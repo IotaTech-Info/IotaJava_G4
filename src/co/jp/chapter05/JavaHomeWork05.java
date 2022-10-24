@@ -119,18 +119,18 @@ public class JavaHomeWork05 {
 		//質問8
 		System.out.println("\n質問8:");
 		int row = 10;//行数
-        int[][] pasukaru = new int[row][row];
-        for (int i = 0; i < row; i++){
-            for(int j = 0;j<= i;j++){
-                if (j==0 || j==i){
-                    pasukaru[i][j]=1;
-                }else{
-                	pasukaru[i][j]=pasukaru[i-1][j-1]+pasukaru[i-1][j];
-                }
-                System.out.print(pasukaru[i][j]+" ");
-            }
-            System.out.println();
-        }  
+		int[][] pasukaru = new int[row][row];
+		for (int i = 0; i < row; i++){
+			for(int j = 0;j<= i;j++){
+				if (j==0 || j==i){
+					pasukaru[i][j]=1;
+				}else{
+					pasukaru[i][j]=pasukaru[i-1][j-1]+pasukaru[i-1][j];
+					}
+				System.out.print(pasukaru[i][j]+" ");
+			}
+			System.out.println();
+			}  
 		
 		
 		
