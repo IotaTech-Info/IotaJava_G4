@@ -76,7 +76,7 @@ public class JavaHomeWork04 {
 				System.out.print(mul[i][j] + " ");
 			}
 			System.out.println();
-		}
+		} 
 	
 		
 	}
