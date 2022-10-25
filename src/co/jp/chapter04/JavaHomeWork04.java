@@ -53,30 +53,30 @@ public class JavaHomeWork04 {
 		
 		//問題７︓⾏列（２次元配列）の和と積を計算してください。
 		
-		int[][]a = new int[][] {{1,2},{1,2}};
-		int[][]b = new int[][] {{3,4},{3,4}};
-		int[][]sum = new int[2][2];
-		int[][]mul = new int[2][2];
-		for(int i = 0;i < 2;i++) {
-			for(int j = 0;j < 2;j++) {
-				sum[i][j] = a[i][j] + b[i][j];
-				mul[i][j] = a[i][j] * b[i][j];
-			}
-		}
-		System.out.println("和は：");
-		for(int i = 0;i < 2;i++) {
-			for(int j = 0;j < 2;j++) {
-				System.out.print(sum[i][j] + " ");
-			}
-			System.out.println();
-		}
-		System.out.println("積は：");
-		for(int i = 0;i < 2;i++) {
-			for(int j = 0;j < 2;j++) {
-				System.out.print(mul[i][j] + " ");
-			}
-			System.out.println();
-		} 
+//		int[][]a = new int[][] {{1,2},{1,2}};
+//		int[][]b = new int[][] {{3,4},{3,4}};
+//		int[][]sum = new int[2][2];
+//		int[][]mul = new int[2][2];
+//		for(int i = 0;i < 2;i++) {
+//			for(int j = 0;j < 2;j++) {
+//				sum[i][j] = a[i][j] + b[i][j];
+//				mul[i][j] = a[i][j] * b[i][j];
+//			}
+//		}
+//		System.out.println("和は：");
+//		for(int i = 0;i < 2;i++) {
+//			for(int j = 0;j < 2;j++) {
+//				System.out.print(sum[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+//		System.out.println("積は：");
+//		for(int i = 0;i < 2;i++) {
+//			for(int j = 0;j < 2;j++) {
+//				System.out.print(mul[i][j] + " ");
+//			}
+//			System.out.println();
+//		} 
 	
 		
 	}
