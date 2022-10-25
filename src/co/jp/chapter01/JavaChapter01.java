@@ -1,39 +1,52 @@
 package co.jp.chapter01;
 
-public class JavaChapter01 {
 
+
+import java.util.Scanner;
+
+public class JavaChapter01 {
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		
-		System.out.println("Hello world!");
+		String Dog_Name;
+		int Dog_Age;
 		
-		int i = 100;
-		System.out.println(i);
+		Dog MyDog = new Dog();
 		
-		int a = 5;
-		int b = 18;
-		System.out.println(a + b);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("ワンちゃんの名前を入力してください");
+		Dog_Name = scanner.next();
+		
+		System.out.println("ワンちゃんの年齢を入力してください");
+		Dog_Age = scanner.nextInt();
+		
+		MyDog.SetName(Dog_Name);
+		MyDog.SetAge(Dog_Age);
+		MyDog.ShowProfile();
+		
+	}
+}
 		
 		
-		// mod %
+	class Dog
+	{
+		private String Name;
+		private int Age;
 		
-		
-		i++; //i = i + 1
-		i--; //i = i - 1
-		
-		int x = 100;
-		int y = 99;
-		
-		if (x >y) {
-			System.out.println("xはｙより大きい。");
-		}else {
-			System.out.println("ｘはｙ以下。");
+		public void SetName( String nm )
+		{
+			Name = nm;
 		}
-				
-		//与或非
+		public void SetAge(int age) {
+			Age = age;
+		}
 		
-		int max = x > y ? x : y; // java底层关系判断 易读性不高，别搞。
-		System.out.println(max);
+		public void ShowProfile()
+		{
+			System.out.println("名前は、" + Name + "です。");
+			System.out.println("年齢は" + Age + "歳です。");
+		}
 	}
 
-}
+
+
+
