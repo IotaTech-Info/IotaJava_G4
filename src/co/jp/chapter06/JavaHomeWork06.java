@@ -42,7 +42,7 @@ public class JavaHomeWork06 {
 //		質問６-０︓配列は直接に印刷できません。下記メソッドを利⽤して、配列をprintします。以下メソッドを呼び出してください。
 		String[] array6_0 = new String[] { "1", "2", "3", "4" };
 		printArray(array6_0);
-		
+
 		System.out.println("");
 //		質問６-１︓以下静的なメソッドを定義してください。
 		int[] left = new int[] { 1, 2, 3, 4 };
@@ -90,21 +90,20 @@ public class JavaHomeWork06 {
 
 		System.out.println("");
 //		質問8
-		int[] array8 = new int[] { 7,6,8,2,9,1,4,3,5 };
+		int[] array8 = new int[] { 7, 6, 8, 2, 9, 1, 4, 3, 5 };
 		int[] sort = bubbleSort(array8);
 		for (int i = 0; i < sort.length; i++) {
 			System.out.print(sort[i]);
 		}
-		
+
 		System.out.println("");
 //		質問9
 		bubbleSort(result(right, left));
-		
-		
+
 		int[] bub = bubbleSort(result(right, left));
-		
+
 		print(bub);
-		
+
 	}
 
 //	質問２
@@ -216,7 +215,7 @@ public class JavaHomeWork06 {
 
 //	質問7
 	public static char[] trim(int start, int end, char array[]) {
-		char[] a = new char[array.length];
+		char[] a = new char[array.length - start - end];
 		for (int i = 0; i < array.length - start - end; i++) {
 			a[i] = array[start + i];
 		}
@@ -226,13 +225,13 @@ public class JavaHomeWork06 {
 //	質問8
 	public static int[] bubbleSort(int[] array) {
 		int[] arr = new int[array.length];
-		
-		for(int i = 0 ; i < array.length;i++) {
+
+		for (int i = 0; i < array.length; i++) {
 			arr[i] = array[i];
 		}
-		
-		for (int i = 0; i < arr.length-1; i++) {
-			for (int j = arr.length-1; j > i; j--) {
+
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = arr.length - 1; j > i; j--) {
 				if (arr[j - 1] > arr[j]) {
 					int temp = arr[j - 1];
 					arr[j - 1] = arr[j];
@@ -242,8 +241,7 @@ public class JavaHomeWork06 {
 		}
 		return arr;
 	}
-	
-	
+
 //	print
 	public static void print(int[] array) {
 		for (int i = 0; i < array.length; i++) {
