@@ -114,10 +114,10 @@ public class JavaHomeWork05 {
 //		for (int i = 0; i < row; i++) {
 //			int width = row - i;
 //			for (int j = 0; j <= width; j++) {
-//				System.out.print("  ");
+//				System.out.print(" ");
 //			}
 //			for (int height = 0; height <= i; height++) {
-//				System.out.print(trangle[i][height] + "  ");
+//				System.out.print(trangle[i][height] + " ");
 //			}
 //			System.out.println();
 //		}
