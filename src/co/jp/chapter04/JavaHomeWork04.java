@@ -22,16 +22,20 @@ public class JavaHomeWork04 {
 //		}
 		System.out.println("回答4:4行2列の行列「array2d」を行の順番に各列の要素を出力する");
 		
-//		問題5:int[] array = new int[] {1, 3, 5, 7, 100, 0, 1}; 左の配列の最大値と最小桁値を System.out.println()。
+//		問題5:int[] array = new int[] {1, 3, 5, 7, 100, 0, 1}; 左の配列の最大値と最小値を System.out.println()。
 		int[] array5 = new int[] {1, 3, 5, 7, 100, 0, 1};
 		int max = 0;
+		int min = 0;
 		for (int i = 0; i < array5.length; i++) {
 		    int v = array5[i];
 		    if (v > max) {
 		        max = v;
 		    }
+		    if (v < min) {
+		        min = v;
+		    }
 		}
-		System.out.println("回答5:配列の最大値は"+max+", 最大値の最小桁値は"+max%10);
+		System.out.println("回答5:配列の最大値は"+max+", 最大値の最小値は"+min);
 
 //		問題6:問題1の配列のSUMを求める。 
 		int[] array1 = new int[4];
