@@ -116,8 +116,8 @@ public class JavaHomeWork05 {
 //			for (int j = 0; j <= width; j++) {
 //				System.out.print(" ");
 //			}
-//			for (int height = 0; height <= i; height++) {
-//				System.out.print(trangle[i][height] + " ");
+//			for (int k = 0; k <= i; k++) {
+//				System.out.print(trangle[i][k] + " ");
 //			}
 //			System.out.println();
 //		}
