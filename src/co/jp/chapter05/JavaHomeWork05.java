@@ -25,7 +25,6 @@ public class JavaHomeWork05 {
 //int max = array[0];
 //int min = array[0];
 //int sum = 0;
-//int value = 0;
 //for (int i = 0; i < array.length; i++) {
 //	sum = sum + array[i];
 //	if (array[i] > max) {
@@ -35,7 +34,7 @@ public class JavaHomeWork05 {
 //		min = array[i];
 //	}
 //}
-//value = sum / array.length;
+//double value = Double.valueOf(sum) / array.length;
 //System.out.println("最大値=" + max + ",最小値=" + min + ",和=" + sum + ",平均値=" + value);
 		
 //		質問4:質問3の配列に重複ある要素を探す(要素の表示次数集計必要なし)。
@@ -94,11 +93,17 @@ public class JavaHomeWork05 {
 //		int n = 10;
 //        for (int line = 1; line <= n; line++) {
 //            for (int j = 0; j <= n - line; j++) {
-//                System.out.print(" ");
+//                System.out.print("  ");
 //            }
 //            int C = 1;
 //            for (int i = 1; i <= line; i++) {
-//                System.out.print(C + " ");
+//            	if (C < 10) {
+//            		System.out.print(C + "   ");
+//            	} else if (C >= 10 && C <100) {
+//            		System.out.print(C + "  ");
+//            	} else {
+//            		System.out.print(C + " ");
+//            	}
 //                C = C * (line - i) / i;
 //            }
 //            System.out.println();
