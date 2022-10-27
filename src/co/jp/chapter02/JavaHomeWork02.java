@@ -11,9 +11,7 @@ public class JavaHomeWork02 {
 		// 2. equals
 		
 	// 質問３︓Float値⇒String⽂字列変更する場合、どうなメソッドを利⽤しますか
-		// 1. String.valueOf("1.0F")
-		System.out.println(String.valueOf("1.0F"));
-		System.out.println(1.0F + "");
+		// 1.0F + ""
 	
 
 	// 質問４︓以下式の値を記載してください。
