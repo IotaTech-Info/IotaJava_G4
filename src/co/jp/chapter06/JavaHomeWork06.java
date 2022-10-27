@@ -67,6 +67,7 @@ public class JavaHomeWork06 {
 		}
 		printArray(list9.toArray());
 	}
+	//######################################以下为回答###################################
 	//問題1
 	//修飾子;public static
 	//返却型;void
