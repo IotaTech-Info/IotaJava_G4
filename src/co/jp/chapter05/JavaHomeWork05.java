@@ -118,7 +118,7 @@ public class JavaHomeWork05 {
 		System.out.println();
 		*/
 		
-		//設問8
+		/*設問8
 		int row = 10;
 		int[][] triangle = new int[row][row];
 		int len = triangle.length;
@@ -142,5 +142,6 @@ public class JavaHomeWork05 {
 			}
 			System.out.println();
 		}
+		*/
 	}
 }
