@@ -6,20 +6,20 @@ public class JavaHomeWork06 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		//問題2
+		//問題2_test
 		int [] array_1=gennerateArray(20, 1000);
 		System.out.println("問題2");
 		System.out.println(max(array_1));
 		System.out.println(min(array_1));
 		System.out.println(sum(array_1));
-		//問題6-0
+		//問題6-0_test
 		System.out.println("問題6-0");
 		ArrayList<Integer> list6_0=new ArrayList<Integer>();
 		for (int i = 0; i < array_1.length; i++) {
 			list6_0.add(array_1[i]);
 		}
 		printArray(list6_0.toArray());
-		//問題6-1
+		//問題6-1_test
 		System.out.println("問題6-1");
 		int[]left=new int[] {1,2,3,4};
 		int[]right=new int[] {5,6,7,8};
@@ -29,7 +29,7 @@ public class JavaHomeWork06 {
 			list6_1.add(result6_1[i]);
 		}
 		printArray(list6_1.toArray());
-		//問題6-2
+		//問題6-2_test
 		System.out.println("問題6-2");
 		int [] array= {1,2,3,4};
 		int[]result6_2=subArray(array, 1, 2);
@@ -38,7 +38,7 @@ public class JavaHomeWork06 {
 			list6_2.add(result6_2[i]);
 		}
 		printArray(list6_2.toArray());
-		//問題7
+		//問題7_test
 		System.out.println("問題7");
 		char[] input=new char[] {' ',' ','A','b',' ',' ','C',' '};
 		char[] result7=trim(input);
@@ -47,7 +47,7 @@ public class JavaHomeWork06 {
 			list7.add(result7[i]);
 		}
 		printArray(list7.toArray());
-		//問題8
+		//問題8_test
 		System.out.println("問題8");
 		int[] array8=gennerateArray(20, 100);
 		int []result8=bubbleSort(array8);
@@ -56,7 +56,7 @@ public class JavaHomeWork06 {
 			list8.add(result8[i]);
 		}
 		printArray(list8.toArray());
-		//問題9
+		//問題9_test
 		System.out.println("問題9");
 		int[]array9_1=gennerateArray(10, 100);
 		int[]array9_2=gennerateArray(10, 100);
