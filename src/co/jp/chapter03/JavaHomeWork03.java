@@ -40,6 +40,32 @@ public class JavaHomeWork03 {
 		
 		//質問２:日本のコインを１円、５円、１０円、１００円、５００円があります。３３４０円のコイン数をもとめください。
 		
+		   int total = 3340;
+		    
+		    int b = total / 500;
+		    
+		    int c = (total % 500) / 100;
+		    
+		    int d = ((total % 500) % 100) / 10;
+		    
+		    int e = (((total % 500) % 100) % 10)/ 5;
+		    		
+		    int f = ((((total % 500 ) % 100) % 10) % 5 )/1;
+		    
+		    int g = a + b + c + d + e ;
+		    		
+		    System.out.println("500円は" + b + "枚です。");
+		    
+		    System.out.println("100円は" + c + "枚です。");
+		    
+		    System.out.println("10円は" + d + "枚です。");
+		    
+		    System.out.println("5円は" + e + "枚です。");
+		    
+		    System.out.println("1円は" + f + "枚です。");
+		    
+		    System.out.println("総コイン数は" + g + "です。" );
+		    
 		
 		
 		
@@ -84,7 +110,7 @@ public class JavaHomeWork03 {
 		
 		
 
-		//授業での練習：菱形
+	
 		
 		
 		
