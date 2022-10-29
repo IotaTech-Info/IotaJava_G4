@@ -92,6 +92,7 @@ public class JavaHomeWork05 {
 		
 		
 		
+		
 		//質問７︓配列を昇順でソートする（java.util等メソッド利⽤禁⽌）。
 		
 		int [] array7 = new int [] {1,16,8,9,2};
