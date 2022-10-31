@@ -41,6 +41,7 @@ public class JavaHomeWork03 {
 		int sum = 0; 
 	    for (int c : result) {
 	         sum = sum + c;
+	         //System.out.println(c);
 	    }
 	    
 		System.out.println("コインの(最小)枚数:"+sum);
