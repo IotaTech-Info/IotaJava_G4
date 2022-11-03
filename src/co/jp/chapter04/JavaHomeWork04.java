@@ -39,15 +39,15 @@ public class JavaHomeWork04 {
 		//問題2: {5,6}
 		int[] array_2 = new int[] {5,6};
 		System.out.println(Arrays.toString(array_2)); 
-		//問題3: 
+		//問題3: {[0, 0, 0], [0, 0, 0]}
 		int[][] arr_3 = new int[2][3];
 		for(int i = 0; i < arr_3.length; i++) {
-			for(int j = 0; j < arr_3[i].length; j++) {
-				System.out.print(arr_3[i][j]);
-			}
-			System.out.println();
+			System.out.println(Arrays.toString(arr_3[i]));
+//			for(int j = 0; j < arr_3[i].length; j++) {
+//				System.out.print(arr_3[i][j]);
+//			}
+//			System.out.println();
 		}
-		
 		//問題4: 
 		int[][] array2d = new int[4][2];
 		array2d[0] = new int[] {1,2};
@@ -84,14 +84,8 @@ public class JavaHomeWork04 {
 		}
 		System.out.println("Sum=" + sum);
 		//問題7:
-		int[][] array7a = new int[][] {
-			{2,5},
-			{1,6}
-		};
-		int[][] array7b = new int[][] {
-			{10,20},
-			{30,40}
-		};
+		int[][] array7a = new int[][] {{2,5}, {1,6}};
+		int[][] array7b = new int[][] {{10,20}, {30,40}};
 		System.out.println("A:");
 		print(array7a);
 		System.out.println("B:");
