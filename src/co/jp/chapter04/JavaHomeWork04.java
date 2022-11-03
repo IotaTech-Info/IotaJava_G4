@@ -56,6 +56,6 @@ public class JavaHomeWork04 {
 			 }
 		}
 		System.out.println("和:"+array2d_sum);
-		System.out.println("積:"+array2d_pro);
+		System.out.println("積:"+array2d_pro); 
 	}
 }
