@@ -1,7 +1,7 @@
 package co.jp.chapter03;
 
 public class JavaHomeWork03 {
-
+// 質問１
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		int  a = 56;
