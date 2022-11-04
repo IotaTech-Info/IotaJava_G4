@@ -4,7 +4,7 @@ public class homework04 {
 
 	public static void main(String[] args) {
 		
-				//問題1:int[] array = new int[4]; 各要素の値を記載してください。
+			//問題1:int[] array = new int[4]; 各要素の値を記載してください。
 				//0,0,0,0
 				
 				// 問題2:int[] array = new int[] {5, 6}; 各要素の値を記載してください。
