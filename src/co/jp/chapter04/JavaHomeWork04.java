@@ -46,7 +46,7 @@ public class JavaHomeWork04 {
 		for (int i :array_Q1) {
 			sum+=i;
 		}
-		System.out.println(sum);
+		System.out.println("問題１の配列のSUMは"+sum);
 		
 		//問題７︓⾏列（２次元配列）の和と積を計算してください。
 		//回答：
