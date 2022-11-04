@@ -32,7 +32,7 @@ public class JavaHomeWork02 {
 		//3    System.out.println("a");
 		//4 }
 		
-		//答え：a
+		//答え：　a
 
 	}
 }
