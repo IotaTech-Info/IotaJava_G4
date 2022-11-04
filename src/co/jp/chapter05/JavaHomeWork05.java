@@ -98,10 +98,11 @@ public class JavaHomeWork05 {
 	        }
 	        for (int i = 0; i <arr.length ; i++) {
 	            System.out.print(arr[i]+" ");
-	            
+	            System.out.println();	
 	        }
 //質問8:LV10のパスカルの三角形を出力してください。
 	        System.out.println("質問8:");
+		
 	       int [][]arr1 = new int [10][10];
 			for(int i = 0 ; i < arr1.length; i++) {			
 				for (int j = 0; j <= i; j++) {				
