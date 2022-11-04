@@ -1,9 +1,8 @@
 package co.jp.chapter06;
 
-public class JavaHomeWork06 {
+import java.util.Arrays;
 
-//	public static void main(String[] args) {
-	// TODO 自動生成されたメソッド・スタブ
+public class JavaHomeWork06 {
 
 //		質問１．以下関数の修飾⼦、返却型、関数名、引数（引数の型・名称）を回答してください。
 //		public static void main(String[] args);
@@ -133,25 +132,23 @@ public class JavaHomeWork06 {
 //		int[] left = new int[] {1, 2, 3, 4}; 
 //		int[] right = new int[] {5, 6, 7, 8};
 //		// メソッドを実施後 
-//		int[] result = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
-	public static void main(String[] args) {
-		int[] left = {1, 2, 3, 4}; 
-		int[] right = {5, 6, 7, 8};
-		System.out.println(Arrays.toString(mergeArray(left,right)));
-	}
-	static int[] mergeArray(int[] left, int[] right) {
-		int[] result = new int[left.length + right.length];
-		for(int i = 0;i<result.length;i++) {
-			if(i< left.length) {
-				result[i] = left[i];
-			}else {
-				result[i] = right[i - left.length];
-			}
-		}
-		return result;
-	}
-	
-
+//		int[] result = new int[] {1, 2, 3, 4, 5, 6, 7, 8};	
+//	public static void main(String[] args) {
+//		int[] left = new int[] {1, 2, 3, 4}; 
+//		int[] right = new int[]{5, 6, 7, 8};
+//		System.out.println("int[] result = new int[]" + Arrays.toString(mergeArray(left,right)));
+//	}
+//	static int[] mergeArray(int[] left, int[] right) {
+//		int[] result = new int[left.length + right.length];
+//		for(int i = 0;i<result.length;i++) {
+//			if(i< left.length) {
+//				result[i] = left[i];
+//			}else {
+//				result[i] = right[i - left.length];
+//			}
+//		}
+//		return result;
+//	}
 
 //		質問６-２︓以下静的なメソッドを定義してください。
 //		1. メソッド名: subArray 
@@ -164,7 +161,23 @@ public class JavaHomeWork06 {
 //		int[] array = new int[] {1, 2, 3, 4};
 //		// start = 1, length = 2
 //		int[] result = new int[] {2, 3}
-	
+//	public static void main(String[] args) {
+//		int[] array = new int[] { 1, 2, 3, 4 };
+//		int start = 1;
+//		int length = 2;
+//		System.out.println( Arrays.toString(subArray(array,start,length)));
+//	}
+//	static int[] subArray(int[]array,int startIndex,int length){
+//		int[]result =new int[length];
+//		int j = 0;
+//		for(int i = startIndex;i<array.length;i++) {
+//			if(j <length) {
+//			result[j]=array[i];
+//			j++;
+//			}
+//		}
+//		 return result;
+//}
 
 //		質問７︓以下静的なメソッドを定義してください。
 //		1. メソッド名︓trim 
@@ -179,18 +192,76 @@ public class JavaHomeWork06 {
 //		1. 配列の起点から、 ' ' ではない⽂字列のインデックスを探す。
 //		2. 配列の終点から、 ' ' ではない⽂字列のインデックスを探す。 
 //		3. 起点と終点を引数として、質問６-２で作成したサブ配列メソッドを呼び出して、結果 を求める。
+//	public static void main(String[] args) {
+//		char[] input = new char[] { ' ', ' ', 'A', 'b', ' ', ' ', 'C', ' ' };
+//		System.out.println(Arrays.toString(trim(input)));
+//	}
+//	
+//	static char[] subArray(char[] array, int startIndex, int length) {
+//		if (length > 0 && startIndex + length <= array.length) {
+//			char[] inputIndex = new char[length];
+//			for (int i = 0; i < length; i++) {
+//				inputIndex[i] = array[i + startIndex];
+//			}
+//			return inputIndex;
+//		} else {
+//			char[] newArray = {};
+//			return newArray;
+//		}
+//	}
+//
+//	static char[] trim(char[] outputIndex) {
+//		int startIndex = 0;
+//		int length = 0;
+//		for (int i = 0; i < outputIndex.length; i++) {
+//			if (outputIndex[i] != ' ') {
+//				startIndex = i;
+//				break;
+//			}
+//		}
+//
+//		for (int i = outputIndex.length - 1; i >= 0; i--) {
+//			if (outputIndex[i] != ' ') {
+//				length = i - startIndex + 1;
+//				break;
+//			}
+//		}
+//
+//		return subArray(outputIndex, startIndex, length);
+//	}
 
 //		質問８︓バブルソート⽤メソッドを作成してください。 
 //		1. メソッド名︓bubbleSort
 //		2. 引数１︓intの配列 
 //		3. 戻り値︓ソート済みの配列
 //		4. 処理内容︓bubbleSortアルゴリズムを⽤い、⼊⼒した引数の配列をソートしてください。 
+//	public static void main(String[] args) {
+//		int[] a = new int[] {3,8,4,9,1}; 
+//		System.out.println(Arrays.toString(bubbleSort(a)));
+//	}
+//	 static int[] bubbleSort(int[] array) {
+//		for (int i = 0; i < array.length; i++) {
+//			for (int j = i + 1; j < array.length; j++) {
+//				if (array[i] > array[j]) {
+//					int temp = array[i];
+//					array[i] = array[j];
+//					array[j] = temp;
+//				}
+//			}
+//		}
+//		return array;
+//	}
 
 //		質問９︓メソッドの呼び出す練習。 
-//		1. 質問６-１を⽤い、２つ配列をマージします。 
-//		2. 質問８を⽤い、ステップ１のマージした配列をソートする。
-//		3. 注意︓コードを１⾏にしてください。
-
-//		
+//		1. 質問６-１を⽤い、２つ配列をマージします。
+//	public static void main(String[] args) {
+//		int[] merged = mergeArray(new int[] { 1, 2, 3, 4 }, new int[] { 5, 6, 7, 8 });
 //	}
+
+//		2. 質問８を⽤い、ステップ１のマージした配列をソートする。
+//	public static void main(String[] args) {
+//		int[] sorted = bubbleSort(mergeArray(new int[]{1,2,3,4}, new int[]{5,6,7,8});
+//}
+//		3. 注意︓コードを１⾏にしてください。
+//		
 }
