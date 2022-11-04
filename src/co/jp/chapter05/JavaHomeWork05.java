@@ -101,8 +101,19 @@ public class JavaHomeWork05 {
 	            
 	        }
 //質問8:LV10のパスカルの三角形を出力してください。
-	        
-	       // 不会做。
+	        System.out.println("質問8:");
+	       int [][]arr1 = new int [10][10];
+			for(int i = 0 ; i < arr1.length; i++) {			
+				for (int j = 0; j <= i; j++) {				
+					if (j == 0 || j == i) {
+						arr1[i][j]=1;		
+					}else {		
+						arr1[i][j] = arr1[i-1][j-1]+arr1[i-1][j];			
+					}			
+					System.out.print(arr1[i][j]+"\t");				
+				}			
+				System.out.println();			
+			}
 	        /*
 	         質問1:
 1から100までの偶数の和：2550
@@ -126,6 +137,17 @@ public class JavaHomeWork05 {
 32 
 質問7:
 1 1 2 2 6 6 7 9 
+質問8:
+1	
+1	1	
+1	2	1	
+1	3	3	1	
+1	4	6	4	1	
+1	5	10	10	5	1	
+1	6	15	20	15	6	1	
+1	7	21	35	35	21	7	1	
+1	8	28	56	70	56	28	8	1	
+1	9	36	84	126	126	84	36	9	1	
 	         */ 
 	         
 	}
