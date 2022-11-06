@@ -9,6 +9,8 @@ public class JavaChapter06 {
 		System.out.println(sum(a,b));
 		System.out.println(minus(a,b));
 
+		String x = null;
+		System.out.println(x);
 	}
 	
 	static int sum (int item1, int item2) {
@@ -18,4 +20,6 @@ public class JavaChapter06 {
 	static int minus (int item1, int item2) {
 		return item1-item2;
 	}
+	
+	
 }
