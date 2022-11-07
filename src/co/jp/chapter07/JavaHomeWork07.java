@@ -65,22 +65,21 @@ public class JavaHomeWork07 {
 		
 //		2.⾏列計算。2D⾏列クラスのコンストラクタには１配列引数設定してください。
 //		public class Matrix {
-//		 private final int[][] data;
-//		 public Matrix(int[][] data) {
-//		 this.data = data;
-//		 }
-//		 public int[][] getData() {
-//			return this.data;
-//		 }
-//		 public Matrix add(Matrix b) {
-//		int[][] ret = new int[this.data.length][this.data[0].length];
-//		for(int i = 0; i<this.data.length; i++) {
-//			for (int j =0; j<this.data[0].length; j++) {
-//				ret[i][j] = this.data[i][j] + b.getData()[i][j];
+//			private final int[][] data;
+//
+//			public Matrix(int[][] data) {
+//				this.data = data;
 //			}
-//		}
-//		return new Matrix(ret);
-//		 }
+//
+//			public Matrix add(Matrix b) {
+//				int[][] ret = new int[this.data.length][this.data[0].length];
+//				for (int i = 0; i < this.data.length; i++) {
+//					for (int j = 0; j < this.data[0].length; j++) {
+//						ret[i][j] = this.data[i][j] + b.data[i][j];
+//					}
+//				}
+//				return new Matrix(ret);
+//			}
 //		}
 
 
