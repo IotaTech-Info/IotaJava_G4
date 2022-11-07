@@ -126,18 +126,11 @@ public class JavaHomeWork05 {
 					pasukaru[i][j]=1;
 				}else{
 					pasukaru[i][j]=pasukaru[i-1][j-1]+pasukaru[i-1][j];
-					}
+				}
 				System.out.print(pasukaru[i][j]+" ");
 			}
 			System.out.println();
-			}  
-		
-		
-		
-		
-		
-		
-		
-		
+		}  
+			
 	}
 }

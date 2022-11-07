@@ -39,7 +39,7 @@ public class JavaHomeWork04 {
 		int [] array5 = new int[] {1,3,5,7,100,0,1};
 		int max = array5[0];
 		int min = array5[0];
-		for (int i = 1; i<array5.length;i++) {
+		for (int i = 1; i < array5.length;i++) {
 			if (array5[i] > max) {
 				max = array5[i];
 			}
@@ -65,7 +65,7 @@ public class JavaHomeWork04 {
 		int [][]array_sum =new int [2][2];
 		int [][]array_mul =new int [2][2];
 		for(int i =0;i<array_a.length;i++) {
-			for(int j = 0;j < array_a.length;j++) {
+			for(int j = 0;j < array_a[i].length;j++) {
 				array_sum[i][j] = array_a[i][j]+array_b[i][j];
 				array_mul[i][j] = array_a[i][j]*array_b[i][j];
 			}
@@ -78,7 +78,6 @@ public class JavaHomeWork04 {
 		for(int k = 0; k < array_sum.length; k++) {
 			System.out.println(Arrays.toString(array_mul[k]));
 		}
-		
 		
 	}
 }
