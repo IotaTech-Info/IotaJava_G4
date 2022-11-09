@@ -16,7 +16,7 @@ public class JavaHomeWork08 {
 //		String empty = "";
 //		String nullString = null;
 //		System.out.println(nullString.equals(empty)); // true ? false? 原因は ?
-		// false:エラー:nullはeauals使えない。
+		// false:エラー:nullはequalsに使えない。
 
 		// 質問２︓以下コードの出⼒を回答してください。
 		// Employee.java
