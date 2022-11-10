@@ -8,9 +8,9 @@ public class JavaHomework07 {
 		//setageというメソッドがない
 		//question2:
 		int[] array = new int[] {1, 3, 5, 8};
-		Math.MAX(array);
-		Math.MIN(array);
-		Math.Average(array);
+		int max = Math.MAX(array);
+		int min =Math.MIN(array);
+		int ave = Math.Average(array);
 	}
 
 }
