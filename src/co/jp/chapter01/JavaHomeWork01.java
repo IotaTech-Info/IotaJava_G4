@@ -10,7 +10,7 @@ public class JavaHomeWork01 {
 		 int i = 10;
 		 int n = i % 5;
 		 System.out.println("n: " + n);
-
+		 
 		// 質問２︓ 右の式を解釈してください: a = a > 10 ? 11 : 0;
 		//Aが10より大きいかどうかを判定する。10より大きい場合はAに11を、それ以外の場合は0を指定する。
 		 

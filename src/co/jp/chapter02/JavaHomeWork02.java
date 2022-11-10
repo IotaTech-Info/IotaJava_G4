@@ -17,11 +17,9 @@ public class JavaHomeWork02 {
 //		質問4:以下式の値を記載してください。
 		// 	3.0
 		//	1.02.0
-		System.out.println(1.0+"2.0");
 		
 //		質問5:以下ステートメントの出力を記載してください。
-		// 	
-		int a = 10;
-		System.out.println("a");
+		// 	a
+	
 	}
 }
