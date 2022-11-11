@@ -65,6 +65,7 @@ public static int min(int[]datas){
     return c;
 }
 
+//配列の平均値
 public static int ave(int[]datas) {
 	  int a = 0;
       for(int i = 0 ; i <datas.length ; i++){
