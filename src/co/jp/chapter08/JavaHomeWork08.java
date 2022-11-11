@@ -27,10 +27,10 @@ public class JavaHomeWork08 {
 			v.hello();
 		}
 	が違った。正解は：
-	　　public static void print( v) {
+	　　public static void print(Parent v) {
 			v.hello();
 		
-	
+	Override発生する場所はParent
 	 ***/
 	
 
