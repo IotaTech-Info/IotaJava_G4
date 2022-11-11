@@ -2,25 +2,22 @@ package co.jp.chapter08;
 
 public class JavaHomeWork08 {
 
-	static int num;
 
 	public static void main(String[] args) {
         // 
-		// 質問１
-		// int i = 10;
-		// int n = i%5;
-
-		// N = 0
-
-		// 質問２︓ 右の式を解釈してください: a = a > 10 ? 11 : 0;
-		// 回答　現在aの値は10より大きいならばa=11;10以下ならばa=0.
-
-		// 質問３︓変数値を⽐較する演算⼦は = or == ?
-		// 数値を⽐較する演算⼦は == です。
-
-		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
-		//ブリアン（ boolean ）変数に設定可能の値は「true」「false」.
-
+	// 質問１
+//		String x = "a";
+//		String y = "a";
+//		System.out.println(x==y);   true "a"的地址是固定的，指针把a的地址给了x和y 所以比较地址时值是一样的。
+//		System.out.println(x.equals(y)); true  x和y的值都是"a"因此相等 true
+//		String empty = "";
+//		String nullString = null;
+//		System.out.println(empty.equals(nullString)); false 两个值不同。
+	// 質問２	
+//	false
+//	true
+		
+		
 	}
 
 }
