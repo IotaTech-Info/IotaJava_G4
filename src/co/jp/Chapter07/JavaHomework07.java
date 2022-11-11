@@ -51,7 +51,7 @@ public class math {
 		 	int array = {1,2,3,4,5};
 		 	int arrayMax = max(array);
 		 	int arrayMin = min(array);
-		 	int arrayAverage = average(array);//
+		 	int arrayAverage = average(array);
 		 }
 }
 		 */
