@@ -26,11 +26,11 @@ public class Hotel {
 	
 	public void showHetel() {
 		if(status==RoomStatus.EMPTY) {
-			System.out.print("(空)\t");
+			System.out.print("(空)  ");
 		}else if(status==RoomStatus.RESERVE) {
-			System.out.print(pet.getName()+"(予) \t");
+			System.out.print(pet.getName()+"(予)  ");
 		}else {
-			System.out.print(pet.getName()+"\t");
+			System.out.print(pet.getName()+"  ");
 		}
 	}
 }

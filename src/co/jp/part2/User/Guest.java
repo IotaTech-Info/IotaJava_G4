@@ -48,7 +48,7 @@ public class Guest {
 	}
 
 	// 予約メソッド
-	public void Reserve(Hotel[] hotel) {
+	private void Reserve(Hotel[] hotel) {
 		if (!ShowRoom(hotel)) {
 			System.out.println("部屋が一杯です、予約ができません");
 			return;
@@ -137,7 +137,7 @@ public class Guest {
 	}
 
 	// キャンセル
-	public void Cancel(Hotel[] hotel) {
+	private void Cancel(Hotel[] hotel) {
 		System.out.println("キャンセルしたいペットの部屋番号を選んでください！-1は全画面に戻る");
 		for (int i=0;i<hotel.length;i++) {
 			if(hotel[i].getStatus()==RoomStatus.RESERVE) {
@@ -169,7 +169,7 @@ public class Guest {
 
 	// showroom
 	// returnは空室状況 trueは空室あり、falseは無し
-	public boolean ShowRoom(Hotel[] hotel) {
+	private boolean ShowRoom(Hotel[] hotel) {
 		boolean isEmpty = false;
 		System.out.print("部屋状況は：");
 		for (Hotel in : hotel) {

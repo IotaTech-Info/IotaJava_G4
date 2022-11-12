@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import co.jp.part2.Pet.Cat;
 import co.jp.part2.Pet.Pet;
+import co.jp.part2.User.Admin;
 import co.jp.part2.User.Guest;
 import co.jp.part2.User.Hotel;
 
@@ -29,7 +30,7 @@ public class Presentation {
 		String type = "";
 				
 //		System.out.print("hotel: ");
-		Cat cat=new Cat("miao",9,type_Cat);
+		Cat cat=new Cat("mao",9,type_Cat);
 		Hotel[] ho =new Hotel[10];
 		for(int i=0;i<ho.length;i++) {
 			ho[i]=new Hotel();
@@ -41,6 +42,8 @@ public class Presentation {
 		Guest gu=new Guest();
 		gu.Guestenter(ho);
 		
+		Admin ad=new Admin();
+		ad.AdminEntry(ho);
 		Cat catrun=(Cat) ho[0].getPet();
 		catrun.run();
 		System.out.println();
