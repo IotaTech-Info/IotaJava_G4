@@ -21,7 +21,7 @@ System.out.println(nullString.equals(empty));
  2　true，内容相同
  
  3，
- 把 child v 变成parent v 
+ 把 child v 变成parent v 。
  
  
  
@@ -31,7 +31,7 @@ System.out.println(nullString.equals(empty));
  
  
  * 
- */
+ */  
 
 
 
