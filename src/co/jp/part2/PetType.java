@@ -24,4 +24,14 @@ public enum PetType {
 		
 		return null;
 	}
+	
+	public static PetType getEumn(String type) {
+		for(PetType pt:PetType.values() ) {
+			if(type.equals(pt.type)) {
+				return pt;
+			}
+		}
+		
+		return null;
+	}
 }

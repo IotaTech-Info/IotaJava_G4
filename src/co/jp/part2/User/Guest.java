@@ -141,7 +141,7 @@ public class Guest {
 		System.out.println("キャンセルしたいペットの部屋番号を選んでください！-1は全画面に戻る");
 		for (int i=0;i<hotel.length;i++) {
 			if(hotel[i].getStatus()==RoomStatus.RESERVE) {
-				System.out.println("部屋番号:"+i+".\t名前："+hotel[i].getPet().getName());
+				System.out.println("部屋番号:"+i+".\t名前："+hotel[i].getPet().getName()+"  "+hotel[i].getPet().getAge()+"才  "+PetType.getEumn(hotel[i].getPet().getType()).description);
 			}
 		}
 		int cancel_num;

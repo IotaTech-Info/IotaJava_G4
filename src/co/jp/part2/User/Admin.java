@@ -2,6 +2,7 @@ package co.jp.part2.User;
 
 import java.util.Scanner;
 
+import co.jp.part2.PetType;
 import co.jp.part2.RoomStatus;
 
 public class Admin {
@@ -62,7 +63,7 @@ public class Admin {
 		System.out.println("チェックアウトしたいの部屋番号を選んでください！-1は全画面に戻る");
 		for (int i=0;i<hotel.length;i++) {
 			if(hotel[i].getStatus()==RoomStatus.FULL) {
-				System.out.println("部屋番号:"+i+".\t名前："+hotel[i].getPet().getName());
+				System.out.println("部屋番号:"+i+".\t名前："+hotel[i].getPet().getName()+"  "+hotel[i].getPet().getAge()+"才  "+PetType.getEumn(hotel[i].getPet().getType()).description);
 			}
 		}
 		int room;
