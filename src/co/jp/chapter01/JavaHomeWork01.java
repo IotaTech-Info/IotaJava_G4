@@ -1,5 +1,7 @@
 package co.jp.chapter01;
 
+import java.util.Scanner;
+
 public class JavaHomeWork01 {
 
 	static int num;
@@ -19,6 +21,16 @@ public class JavaHomeWork01 {
 		 
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「?」「?」。
 		// "true", "false" です
+		 //NAME:金柑  AGE:18  TYPE:Student
+			
+		Scanner sc1 = new Scanner(System.in);
+
+		String input = sc1.nextLine();
+
+		 String[] input_array = input.split(":");
+		 
+		 System.out.println(input_array[1]);
+
 
 	}
 
