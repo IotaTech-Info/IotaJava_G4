@@ -1,11 +1,12 @@
-package mid.pre;
+package co.jp.mid_pre;
 
-public class Student extends Person implements study {
+public class Teacher extends Person implements teach {
 
 	@Override
-	public void study() {
+	public void teach() {
 		// TODO Auto-generated method stub
-		 System.out.println("student have to study");
+		 System.out.println("teacher have to teaching");
+
 	}
 
 	@Override
@@ -14,31 +15,22 @@ public class Student extends Person implements study {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	@Override
 	int getAge(int age1) {
-		// TODO Auto-generated method stub
+		
 		return age;
-	}
-	
-
-	//overload
-	String getAge(String str) {
 		// TODO Auto-generated method stub
-		if (str == "privacy" ) {
-			return "age can not show";
-		} else {
-			return  Integer.toString(age);
-		}
+		
 	}
-	
+
 	@Override
 	String getGender() {
 		return gender;
-		// TODO Auto-generated method stubs
+		// TODO Auto-generated method stub
 		
 	}
-	
+
 	@Override
 	void setName(String name) {
 		// TODO Auto-generated method stub
@@ -69,6 +61,7 @@ public class Student extends Person implements study {
 	void setID(int id) {
 		// TODO Auto-generated method stub
 		this.id = id;
+		
 	}
 
 }

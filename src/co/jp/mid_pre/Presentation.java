@@ -1,4 +1,4 @@
-package mid.pre;
+package co.jp.mid_pre;
 
 import java.util.Arrays;
 import java.util.Scanner;
