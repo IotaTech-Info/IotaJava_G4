@@ -10,7 +10,6 @@ public class Dog extends Animal{
 	@Override
 	public void sayHello() {
 		// TODO 自動生成されたメソッド・スタブ
-		
 		System.out.println("ワン");
 	}
 	

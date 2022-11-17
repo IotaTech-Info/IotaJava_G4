@@ -70,7 +70,6 @@ public class Main {
 //	5. 操作︓sayHello()︓void 
 //	6. 操作︓getName(): String ⾃分の名称を返す
 //
-//
 //	質問１４︓以下１⾏を解釈してください。
 //
 //	System.out.println(new Animal("cat").getName());
