@@ -12,7 +12,5 @@ public class Dog extends Animal{
 		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("ワン");
 	}
-	
-	
 }
 

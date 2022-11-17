@@ -12,9 +12,5 @@ public class Cat extends Animal {
 		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("ニャー");
 	}
-	
-	
-	
-	
 
 }
