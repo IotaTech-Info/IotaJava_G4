@@ -13,7 +13,7 @@ public class Test {
 		
 		dog.sayHello();
 		
-		System.out.println(new Animal("cat").getName());
+	
 		
 		
 	
