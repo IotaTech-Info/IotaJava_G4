@@ -21,7 +21,10 @@ public class Bird extends Pet implements Fly {
 			return ;
 		}
 		System.out.println("[Bird]"+this.name+"ちゃん is eating");
-		this.feed=100;
+		if(!(this.feed+40>100))
+			this.feed=this.feed+40;
+		else
+			this.feed=100;
 	}
 
 	@Override
@@ -31,7 +34,12 @@ public class Bird extends Pet implements Fly {
 			return ;
 		}
 		fly();
+		if(!(this.status+40>100))
+			this.status=this.status+40;
+		else
+			this.status=100;
 		this.status=this.status+40;
-		this.feed=this.feed-50;
+		
+		this.feed=this.feed-30;
 	}
 }

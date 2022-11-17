@@ -92,6 +92,7 @@ public class Presentation {
 						help=true;
 						continue;
 					}
+					
 					display = true;
 					checkout = true;
 					pass_command = true;
