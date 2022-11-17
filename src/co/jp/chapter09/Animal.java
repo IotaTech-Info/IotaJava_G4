@@ -2,5 +2,7 @@ package co.jp.chapter09;
 
 public abstract class Animal {
 	String name;
-	abstract void speck();
+	int age;
+	String type;
+	abstract void sayHello();
 }

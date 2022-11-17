@@ -9,7 +9,7 @@ public class Bird extends AnimalSky{
 	}
 
 	@Override
-	void speck() {
+	void sayHello() {
 		System.out.println("hello Earth");		
 	}
 
