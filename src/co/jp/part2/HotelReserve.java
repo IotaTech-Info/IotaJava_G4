@@ -1,3 +1,4 @@
+//11月18日　gitへアップ用更新
 package co.jp.part2;
 
 import java.util.Scanner;
@@ -31,6 +32,7 @@ public class HotelReserve {
 			} else if (hotel[re - 1].status.equals("空")) {
 
 				hotel[re - 1].status = "予約";
+				System.out.println(re + "号室を予約しました。");
 
 			} else {
 				System.out.println("この部屋は予約できない他の部屋を入力してください");
@@ -57,6 +59,7 @@ public class HotelReserve {
 			} else if (hotel[re - 1].status.equals("予約")) {
 				hotel[re - 1].status = "空";
 
+				System.out.println(re + "号室の予約をキャンセルしました。");
 			} else {
 				System.out.println("この部屋は予約していない");
 				Reserve(hotel);

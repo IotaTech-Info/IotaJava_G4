@@ -1,3 +1,4 @@
+//11月18日　gitへアップ用更新
 package co.jp.part2;
 
 import java.util.Scanner;
@@ -33,6 +34,14 @@ public class PetHotel {
 		// 実行ループ
 		LOOP: for (;;) {
 			// メニューの入力
+			for (int i = 0; i < MaxRoom; i++) {
+				if (hotel[i].status.equals("在住")) {
+					System.out.println((i + 1) + "号室:" + hotel[i].type + " " + hotel[i].name + " " + hotel[i].status);
+				} else {
+					System.out.println((i + 1) + "号室: " + hotel[i].status);
+				}
+
+			}
 			System.out.println("使いたい機能を入力してください;入住，退室，検索，食事，予約，退出");
 			Scanner sc = new Scanner(System.in);
 

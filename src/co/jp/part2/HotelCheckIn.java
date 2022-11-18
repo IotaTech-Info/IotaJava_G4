@@ -1,3 +1,4 @@
+//11月18日　gitへアップ用更新
 package co.jp.part2;
 
 import java.util.Scanner;
@@ -67,14 +68,17 @@ public class HotelCheckIn {
 
 	static void ckin(Hotel[] hotel, Dog dog) {
 		hotel[dog.COUNT] = new Hotel(dog.name, dog.age, dog.type, "在住");
+		System.out.println(dog.name + "は" + (dog.COUNT + 1) + "号室に入住しました");
 
 	}
 
 	static void ckin(Hotel[] hotel, Cat cat) {
 		hotel[cat.COUNT] = new Hotel(cat.name, cat.age, cat.type, "在住");
+		System.out.println(cat.name + "は" + (cat.COUNT + 1) + "号室に入住しました");
 	}
 
 	static void ckin(Hotel[] hotel, Bird bird) {
 		hotel[bird.COUNT] = new Hotel(bird.name, bird.age, bird.type, "在住");
+		System.out.println(bird.name + "は" + (bird.COUNT + 1) + "号室に入住しました");
 	}
 }
