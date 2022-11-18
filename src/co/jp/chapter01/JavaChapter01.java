@@ -16,7 +16,7 @@ public class JavaChapter01 {
 //		回答：true,false
 
 
-		System.out.println("hello world");
+		System.out.println("１１１");
 
 	}
 }
