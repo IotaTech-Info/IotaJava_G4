@@ -1,17 +1,18 @@
 package co.jp.chapter09;
 
-public class Cat extends LandAnimal {
+public class Cat extends Animal {
 
-	@Override
-	void run() {
-		// TODO 自動生成されたメソッド・スタブ
+	public Cat(String name) {
+		super.name = name;
+	}
 
+	public String getName() {
+		return super.name;
 	}
 
 	@Override
-	void speck() {
-		// TODO 自動生成されたメソッド・スタブ
+	void sayHello() {
+		System.out.println("ニャー");
 
 	}
-
 }
