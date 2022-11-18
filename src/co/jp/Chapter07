@@ -1,0 +1,93 @@
+package co.jp.chapter07;
+
+public class JavaHomeWork07 {
+	/*質問１︓以下コードのコンパイルエラー理由を教えてください。
+	 * 
+	 * // Pet.java
+		public class Pet {
+ 			public String name;
+ 
+ 			public void setName(String value) {
+ 			this.name = value;
+ 			} 
+ 		}
+		// Kicker.java
+		public class Kicker {
+ 			public static void main(String...args) {
+ 			Pet cat = new Pet();
+ 			cat.setAge(1234);
+ 			}
+ 		 }
+	 * 
+	 * 		setAge方法还没被定义就拿来使用了。
+	 * 
+	 * 
+	 * 質問２︓Mathクラスを作成してください。以下メソッドを定義します。
+	 *  1. 配列のMAXを求める静的メソッドを定義。（引数は int 配列） 
+	 * 2. 配列のMINを求める静的メソッドを定義。（引数は int 配列）
+	 *  3. 配列の平均値を求める静的メソッドを定義。（引数は int 配列） 
+	 *  4. mainメソッドで上記それぞれメソッドを呼び出してください。
+	 * 
+	 * 
+	 * */
+	 public static void main(String[] args) {
+	        int[] array = new int[] { 1, 2, 3, 4 ,5 ,6 ,7};
+	       
+	        System.out.println("配列の最大値は" + max(array));
+	        System.out.println("配列の最小値は" + min(array));
+	        System.out.println("配列の平均値は" + average(array));
+	        
+	    }
+
+
+	 //配列のMAX値
+	 public static int max(int[] datas) {
+			int MAX = datas[0];
+			for (int i = 0; i < datas.length; i++) {
+				if (MAX < datas[i]) {
+					MAX = datas[i];
+				}
+			}
+			return MAX;
+		}
+	 //配列のMIN値
+	 public static int min(int[]datas){
+		 int MIN = datas[0];
+		 for(int i = 0 ; i <datas.length ; i++){
+			 if(datas[i]<MIN){
+				 MIN = datas[i];
+			 }
+		 }
+		 return MIN;
+	 }
+
+	 //配列の平均値
+	 public static int average(int[] datas) {
+			int sum = 0;
+			for (int i = 0; i < datas.length; i++) {
+				sum = sum + datas[i];
+			}
+			int average = sum / datas.length;
+			return average;
+		}
+// 2.⾏列計算。2D⾏列クラスのコンストラクタには１配列引数設定してください。
+//		public class Matrix {
+//			private final int[][] data;
+//
+//			/** construct method */
+//			public Matrix(int[][] data) {
+//				this.data = data;
+//			}
+//
+//			// 行列 ADD
+//			public Matrix add(Matrix b) {
+//				int[][] output = new int[this.data.length][this.data[0].length];
+//				for (int i = 0; i < this.data.length; i++) {
+//					for (int j = 0; j < this.data[0].length; j++) {
+//						output[i][j] = this.data[i][j] + b.data[i][j];
+//					}
+//				}
+//				return new Matrix(output);
+//			}
+//		}
+	}
