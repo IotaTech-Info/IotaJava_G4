@@ -1,0 +1,130 @@
+package co.jp.chapter06;
+
+public class JavaHomeWork06 {
+	//質問２．配列の和、MAX値、MIN値を求める処理を関数化してください、main関数に呼び出してください。
+	public static void main(String args[]) {
+		int[] a = { 1, 2, 3, 4 };
+		System.out.println("最大值："+max(a));
+		System.out.println("最小值："+min(a));
+	}
+	public static int max(int[] datas) {
+		int maxvalue = datas[0];
+		for (int i = 0; i < datas.length; i++) {
+			if (datas[i] > maxvalue) {
+				maxvalue = datas[i];
+			}
+		}
+		return maxvalue;
+	}
+	public static int min(int[] datas) {
+		int minvalue = datas[0];
+		for (int i = 0; i < datas.length; i++) {
+			if (datas[i] <minvalue) {
+				minvalue = datas[i];
+			}
+		}
+		return minvalue;
+	}
+	
+/*		質問１．以下関数の修飾⼦、返却型、関数名、引数（引数の型・名称）を回答してください。
+		public static void main(String[] args);
+		
+		修飾⼦ public  返却型 void  関数名 main　引数 String[] args
+			
+	
+		質問３．以下メソッドの実施結果を教えてください。
+		public class Kicker {
+			 private static void sayHello(String y) {
+		 	y = "Hello world";
+			 }
+			 public static void main(String args[]) {
+			 	String x = null;
+			 	sayHello(x);
+			 	System.out.println(x);
+			 }
+		}
+		
+		// 実施結果：null 　　　
+		 
+		
+		質問４︓以下メソッドの実施結果を教えてください。
+		public class Kicker {
+			 private static void fillArray(String[] array) {
+			 	array[0] = "value2";
+			 }
+			 public static void main(String args[]) {
+			 	String[] array = new String[]{"value1"};
+			 	fillArray(array);
+			 	System.out.println(array[0]);
+			 }
+		}
+
+		// 実施結果：value2
+		
+		質問５︓以下メソッドの実施結果を教えてください。
+		public class Kicker {
+			 private static void fillArray(String[] array) {
+				 array = new String[]{"1", "2"};
+			 }
+			 public static void main(String args[]) {
+				 String[] array = null;
+				 fillArray(array);
+				 System.out.println(array == null);
+			 }
+		}
+
+		//  実施結果：true
+		
+		
+　　　	質問６-０︓配列は直接に印刷できません。下記メソッドを利⽤して、配列をprintしま
+　　　	す。以下メソッドを呼び出してください。
+		
+		
+		質問６-１︓以下静的なメソッドを定義してください。
+		1. メソッド名: megerArray
+		2. 引数１︓intの配列 left
+		3. 引数２︓intの配列 right
+		4. 戻り値︓intの配列
+		5. 処理内容︓引数left と 引数right をマージして、新しい配列を作成して返却する。
+		以下メソッドの実施例︓
+		　1　int[] left = new int[] {1, 2, 3, 4};
+	　　　2　int[] right = new int[] {5, 6, 7, 8};
+		3　// メソッドを実施後
+		4　int[] result = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
+		
+		質問６-２︓以下静的なメソッドを定義してください。
+		1. メソッド名: subArray
+		2. 引数１︓intの配列 array
+		3. 引数２︓開始のstartIndex
+		4. 引数３︓⻑さlength
+		5. 戻り値︓intの配列
+		6. 処理内容︓startIndexからstartIndex + lengthまでサブ配列を取得する。
+ 		以下メソッドの実施例︓
+		1　int[] array1 = new int[] {1, 2, 3, 4};
+		2　// start = 1, length = 2
+		3　int[] result = new int[] {2, 3}
+		
+		質問７︓以下静的なメソッドを定義してください。
+		1. メソッド名︓trim
+		2. 引数１︓charの配列
+		3. 戻り値︓charの配列
+		4. 処理内容︓引数１のcharの配列先頭と末尾の空⽩⽂字列を削除してください。
+
+		1　char[] input = new char[] {' ', ' ', 'A', 'b', ' ', ' ', 'C', ' '}; // 入力引数
+		2　// メソッドを実施後
+		3　char[] output = new char[] {'A', 'b', ' ', ' ', 'C'}; // 入力引数
+		
+		質問８︓バブルソート⽤メソッドを作成してください。
+		1. メソッド名︓bubbleSort
+		2. 引数１︓intの配列
+		3. 戻り値︓ソート済みの配列
+		4. 処理内容︓bubbleSortアルゴリズムを⽤い、⼊⼒した引数の配列をソートしてくださ
+		い。
+		
+		
+		質問９︓メソッドの呼び出す練習。
+		1. 質問６-１を⽤い、２つ配列をマージします。
+		2. 質問８を⽤い、ステップ１のマージした配列をソートする。
+		3. 注意︓コードを１⾏にしてください。
+		*/
+}
