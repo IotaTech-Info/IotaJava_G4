@@ -1,4 +1,4 @@
-package co.jp.Chapter09;
+package co.jp.chapter09;
 
 public class JavaHomeWork09 {
 
