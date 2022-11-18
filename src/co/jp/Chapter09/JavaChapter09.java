@@ -1,0 +1,8 @@
+package co.jp.Chapter09;
+
+public class JavaChapter09 {
+public static void main(String[] args) {
+	
+}
+
+}
