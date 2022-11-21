@@ -8,10 +8,10 @@ import co.jp.part2.Pet.Type;
 public class Presentation {
 
 	public static Manager manager=new Manager();
+	public static Client client;
 	
 	public static void main(String[] args) {
 
-	
 		//初期化
 		Client c1=manager.Add("TAI","1388888888");
 		Client c2=manager.Add("HUANG","12588888");
@@ -26,9 +26,10 @@ public class Presentation {
 		Employee e2=manager.Add("Kelly", 500,2,Skill.BEAUTY);//美容师
 		Employee e3=manager.Add("Dr.Sam", 800,2,Skill.DOCTOR);//医生
 		Employee e4=manager.Add("Bob", 1200,1,Skill.DOG_COACH);//训狗师
-		
 	
 		Scanner sc1 = new Scanner(System.in);
+		
+		//実行開始
 		System.out.println("----- 実行開始 -----");
 
 		System.out.println("-----こんにちは！-----");
@@ -85,7 +86,7 @@ public class Presentation {
 					check=isNumeric(input)&&Integer.parseInt(input)>0&&Integer.parseInt(input)-1000<manager.clientList.size();
 					if(check)
 					{
-						Client client=manager.SearchClient(Integer.parseInt(input));
+						 client=manager.SearchClient(Integer.parseInt(input));
 					}
 					else
 					{
@@ -101,7 +102,7 @@ public class Presentation {
 				System.out.print("▶　");
 				input = sc2.next();
 				String[] input_array = input.split(",");
-				if (input_array.length !=1) {
+				if (input_array.length !=2) {
 					System.out.println("INPUT形式不正のため、異常終了");
 					break;
 				}
@@ -116,34 +117,40 @@ public class Presentation {
 				System.out.println("----- 実行終了 -----");
 				return;
 			}
-			
-			//メニュー
-			System.out.println("◆メニュー◆");
-			System.out.println("1-ペッド登録");
-			System.out.println("2-予約／キャンセル");
-			System.out.println("3-チェックイン／チャックアウト");
-			System.out.println("4-餌をあげる");
-		
-			System.out.print("▶　");
-			input = sc2.next();
-			
-			switch(input)
+			while(true)
 			{
-			case "1":
-				System.out.println("----- 登録しました。");
-	
-				return;
-			case "2":
-				Book();
-				break;
-			case "3":
-				CheckInOut();
-				break;
-			case "4":
-				Feed();
-				break;
-			default:
-				break;
+				//メニュー
+				System.out.println("◆メニュー◆");
+				System.out.println("1-ペッド登録");
+				System.out.println("2-予約／キャンセル");
+				System.out.println("3-チェックイン／チャックアウト");
+				System.out.println("4-餌をあげる");
+		
+				System.out.print("▶　");
+				input = sc2.next();
+			
+				switch(input)
+				{
+					case "1":
+						manager.ViewMyPet(client);
+						break;
+					case "2":
+						Book();
+						break;
+					case "3":
+						CheckInOut();
+						break;
+					case "4":
+						System.out.println("ペッドを選んでください。");
+						manager.ViewMyPet(client);
+						System.out.print("▶　");
+						input = sc2.next();
+						int num=Integer.parseInt(input);
+						Feed(client.pets[num]);
+						break;
+					default:
+						return;
+				}
 			}
 		}
 		System.out.println("----- 実行終了 -----");
@@ -155,7 +162,7 @@ public class Presentation {
 		manager.ViewList("Pet");
 		manager.ViewList("Client");
 		System.out.println("----- 実行終了 -----");
-		return;
+		
 		
 		
 	}
@@ -163,21 +170,21 @@ public class Presentation {
 	{
 		System.out.println("----- チェックイン／チャックアウト　成功-----");
 		System.out.println("----- 実行終了 -----");
-		return;
+		
 		
 	}
 	public static void Book()
 	{
 		System.out.println("----- 予約／キャンセル　成功-----");
 		System.out.println("----- 実行終了 -----");
-		return;
 		
 	}
-	public static void Feed()
+	public static void Feed(Pet pet)
 	{
+		pet.eat();
 		System.out.println("----- 餌をあげる　成功-----");
 		System.out.println("----- 実行終了 -----");
-		return;
+		
 		
 	}
 	

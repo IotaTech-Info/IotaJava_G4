@@ -76,7 +76,7 @@ public class Manager {
 		employee.name=name;
 		employee.cost=cost;
 		employee.max=max;
-		employee.skill=skill;
+		employee.skill=skill; 
 		employee.code=code;
 		employeeList.add(employee);
 		return employee;
@@ -90,7 +90,23 @@ public class Manager {
 		System.out.println("＜お帰りなさい！"+client.name+"　様！＞");
 		return client;
 	}
-	
+	public void ViewMyPet(Client client)
+	{
+		
+		for(int i=0;i<client.pets.length;i++)
+		{
+			System.out.print("["+i+"]");
+			if(client.pets[i]!=null)
+			{
+				
+				View(client.pets[i]);
+			}
+			else
+			{
+				System.out.println("データなし");
+			}
+		}
+	}
 	public void View(Order order)
 	{
 		
