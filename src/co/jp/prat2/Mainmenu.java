@@ -58,6 +58,7 @@ public class Mainmenu {
 				System.out.println("main menu戻る");
 				break;
 			case 6:
+				System.out.println("受け終了");
 				return;
 			default:
 				System.out.println("?");

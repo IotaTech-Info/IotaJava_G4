@@ -1,9 +1,14 @@
 package co.jp.chapter09;
 
-public abstract class Animal {
+public  abstract class Animal {
 	
+	int age;
 	String name;
+	String type;
 	
-	abstract void speck();
+	abstract void sayHello();
 	
+	public String getName() {
+		return name;
+	}
 }
