@@ -1,0 +1,253 @@
+//和git连接时总弹窗报错“接続タイムアウト”。先手动上传，实在不好意思。
+
+//Hotel 类
+
+package co.jp.part2;
+
+import java.util.Scanner;
+
+public class Hotel {
+	
+	Room[][] rooms = new Room[3][6];
+	
+	//给Room[][]的room_num值编号
+
+	Hotel() {
+	for (int i = 0; i < rooms.length; i++) {
+		for (int j = 0; j < rooms[i].length; j++) {
+			rooms[i][j] = new Room((i + 1) * 1000 + j + 1);
+			}        
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println("----- 実行開始 -----");
+		Hotel hotel=new Hotel();
+		Scanner scan=new Scanner(System.in);
+		
+		for(;;){
+			System.out.println();	
+			System.out.println("——————————————Please input a number from 1 to 5 for selecting the service————————————\n"+" \n"+"1 Show all the rooms\n"+"2 Search customer information\n"+"3 Check in\n"+"4 Check out\n"+"5 Exit the system\n");
+			String input=scan.next();
+			String input_String=input;
+			switch (input_String){
+				case "1" :
+					hotel.show();
+					break;
+				case "2":
+					System.out.println("Input the room number you want to search");
+					int input_search=scan.nextInt();
+					hotel.search(input_search);
+					break ;
+				case "3" :
+					System.out.println("Input the room number,name and type");
+					hotel.checkin();
+					break;
+				case "4":
+					System.out.println("Input the room number you want to check out");
+					hotel.checkout();
+					break;
+				case "5":
+					System.out.println("Thanks for your using!");
+					System.out.println("----- 実行終了 -----");
+					System.exit(0);
+				default:
+					System.out.println("You did not input the number correctly. Please try again.");
+			}
+		}
+	}
+		//创建一个show方法,显示所有的房间信息
+		public	void show() {
+			//通过循环将房间号以二位数组形式输出
+			for (int i = 0; i < rooms.length; i++) {
+				for (int j = 0; j < rooms[i].length; j++) {
+					System.out.print(rooms[i][j].room_num + "\t");
+				}
+				System.out.println();
+				for (int j = 0; j < rooms[i].length; j++) {
+					//判断rooms[i][j]中是否住人
+					if (rooms[i][j].pet != null) {
+						//若对应房间有人住则,输出房间宠物的名
+						System.out.print(rooms[i][j].pet.type+rooms[i][j].pet.name + "\t");
+						} else {
+						//若对应的房间无人居住,则输出默认值null
+							System.out.print(rooms[i][j].pet + "\t");
+					}
+				}
+				System.out.println();
+			}
+		}
+	
+		//创建一个checkin方法,输入房间信息
+		public void checkin() {
+			//建立一个循环,通过循环控制输入异常时重新输入
+			for(;;) {
+				Scanner scan = new Scanner(System.in);
+				int input_roomnum = scan.nextInt();//输入想要入住的房间号
+				String input_petname = scan.next();//输入名字
+				String input_pettype = scan.next();//输入类型
+				int i = input_roomnum / 1000 - 1;//根据对应房间号求出该值所对应的下标i
+				int j = input_roomnum % 10 - 1;//根据对应房间号求出该值所对应的下标j
+				if (rooms[i][j].pet != null) {
+					System.out.println("Occupied, please change a room ");
+					} else {
+						//将输入的值以新建一个构造方法的信息填写到room[i][j]房间所对应的顾客信息中
+						rooms[i][j].pet = new Pet(input_petname,input_pettype);
+						System.out.println("Check in completed");
+						
+						break;
+				}
+			}
+		}
+//创建一个checkout方法,删除房间信息
+		public void checkout() {
+			for(;;) {
+				Scanner scan = new Scanner(System.in);
+				int input_roomnum = scan.nextInt();
+				int i = input_roomnum / 1000 - 1;
+				int j = input_roomnum % 10 - 1;
+				if (rooms[i][j].pet != null) {
+					//将room[i][j]房间中顾客信息都改为空值,即退房成功
+					rooms[i][j].pet = null;
+					System.out.println("Check out completed");
+					break;
+					} else {
+						System.out.println("Vacant room,please try again");
+				}
+			}
+		}
+		
+//创建一个查询类,根据输入房间号,显示入住人员的所有信息
+		public void search(int roomnum) {
+			int i = roomnum / 1000 - 1;
+			int j = roomnum % 10 - 1;
+			if (rooms[i][j].pet != null) {
+				System.out.println("name : "+rooms[i][j].pet.name);
+				System.out.println("type : "+rooms[i][j].pet.type);
+				} else {
+					System.out.println("Vacant room");
+			}
+		}
+		 
+ }
+ 
+//Pet类
+
+package co.jp.part2;
+
+public class Pet {
+//	创建一个宠物类
+	    
+		public   String name;//宠物名字
+		public   String type;//宠物类型
+		
+
+			//宠物的构造函数
+			Pet(String name,String type){
+				this.name=name;
+				this.type=type;
+			}		
+		public void eat() {
+			}
+}
+
+//Bird类
+
+package co.jp.part2;
+
+public class Bird extends Pet implements Fly{
+
+	Bird(String name, String type) {
+		super(name, type);
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+	@Override
+    public void fly() {
+	}
+    @Override
+    public void eat() {
+    	
+    }
+}
+
+//Cat类
+
+package co.jp.part2;
+
+
+public class Cat extends Pet implements Run  {
+
+	Cat(String name, String type) {
+		super(name, type);
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+	@Override
+	public void run() {
+		
+	}
+	@Override
+	public void eat() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+}
+
+//Dog类
+
+package co.jp.part2;
+
+public class Dog extends Pet implements Run  {
+
+	Dog(String name, String type) {
+		super(name, type);
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+	@Override
+	public void run() {
+		// TODO 自動生成されたメソッド・スタブ
+		System.out.println();
+	}
+	@Override
+	public void eat() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+	
+
+}
+
+
+//Fly interface
+
+package co.jp.part2;
+
+public interface Fly {
+	public void fly();
+}
+
+
+
+//Run interface
+
+package co.jp.part2;
+
+public interface Run {
+	public void run();
+}
+
+//Room 类
+
+package co.jp.part2;
+
+class Room {
+		
+	public int room_num;//房间数量
+    Pet pet;//房间用户
+	
+    public  Room(int num) {
+		// TODO 自動生成されたコンストラクター・スタブ
+		this.room_num=num;
+	}
+}
+
+
