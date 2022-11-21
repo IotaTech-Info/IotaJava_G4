@@ -7,7 +7,7 @@ public class JavaChapter04 {
 		int j = arr_1[i];
 	    System.out.println(arr_1[i]);
 	}
-
+ 
 	}
 
 }

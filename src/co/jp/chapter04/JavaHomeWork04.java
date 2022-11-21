@@ -10,6 +10,7 @@ public class JavaHomeWork04 {
         //問題１
         //解答：[0,0,0,0]
 	
+		
 		//問題２
 		//解答：[5,6]
 		
