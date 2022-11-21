@@ -139,7 +139,7 @@ public class Presentation {
 				}
 				
 				//Room information output
-				System.out.print("Thank you for your order.\n");
+				System.out.println("Thank you for your order.\n");
 				System.out.println("Here is your room information.\n");
 				System.out.println("------INFO-------\n");
 				

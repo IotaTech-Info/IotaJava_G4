@@ -8,7 +8,7 @@ public class Cat extends Pet implements Dance{
 
 	@Override
 	public void dance() {
-		System.out.println(getName() + " is running like an Angle!");	
+		System.out.println(getName() + " is dancing like an Angle!");	
 	}
 
 	@Override
