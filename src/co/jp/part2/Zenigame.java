@@ -17,7 +17,7 @@ public class Zenigame extends Pokemon implements Mizudeppou {
 	}
 	
 	public void wear_sunglasses() {
-		System.out.println(this.name+"ゼニゼニ!");
+		System.out.println(this.name+"「ゼニゼニ!」");
 		System.out.println(this.name+"はサングラスを掛けて、ゼニガメ消防団の仲間たちを呼んできました");
 	} 
 	

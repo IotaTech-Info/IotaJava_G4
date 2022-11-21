@@ -28,10 +28,10 @@ public class Presentation {
 		Scanner sc1 = new Scanner(System.in);
 		
 		for (;;) {
-			System.out.print("----- ご利用したい機能を選択してください： -----\n");
+			System.out.print("\n----- ご利用したい機能を選択してください： -----\n");
 			System.out.println("----- 0: ポケモン登録 -----");
 			System.out.println("----- 1: ポケモン登録解除 -----");
-			System.out.println("----- 2: チーム -----");
+			System.out.println("----- 2: チームメンバーを見る -----");
 			System.out.println("----- 3: ポケモンと遊ぶ -----");
 			
 			
@@ -86,12 +86,13 @@ public class Presentation {
 		
 		String name = "";
 		String species = "";
-		Pokemon new_pokemon=null;
+	
 		
 		Scanner sc1 = new Scanner(System.in);
+		System.out.println("----- ポケモン登録 開始 -----");
 		
 		for (;;) {
-			System.out.println("----- ポケモン登録 開始 -----");
+			
 			// TODO 機能のループ
 
 			String input = sc1.nextLine();
@@ -113,13 +114,16 @@ public class Presentation {
 			System.out.println("入力した文字は=" + input);
 			
 			if ("NAME".equals(input_array[0])) {
+				boolean is=true;
 				for(Pokemon pkm : trainer.team) {
-					if(pkm!=null && pkm.name!=input_array[1]) {
-						name = input_array[1];
-					}
-					else {
+					if(pkm!=null && pkm.name.equals(input_array[1])) {
 						System.out.println("この名前はもう使われているため、新しく名前を入力してください。\n");
+						is=false;
+						break;
 					}
+				}
+				if(is) {
+					name = input_array[1];
 				}
 				
 			}
@@ -131,6 +135,7 @@ public class Presentation {
 
 			if (!"".equals(name)  && !"".equals(species)) {
 				// input 情報を収集できた時点
+				Pokemon new_pokemon=null;
 				switch (species) {
 				case "Fushigidane":
 					new_pokemon=new Fushigidane(name,trainer);
@@ -145,10 +150,13 @@ public class Presentation {
 					System.out.println("SPECIES範囲外のため、異常終了");
 					break;
 				}
+				int i=0;
 				for(Pokemon pkm : trainer.team) {
 					if(pkm==null) {
-						pkm=new_pokemon;
+						trainer.team[i]=new_pokemon;
+						break;
 					}
+					i++;
 				}
 				System.out.println("----- ポケモン登録 完成 -----");
 			
@@ -157,7 +165,7 @@ public class Presentation {
 //			
 //			
 		}
-		sc1.close();
+//		sc1.close();
 	}
 
 	public static Trainer Trainer_Register() {
@@ -214,7 +222,7 @@ public class Presentation {
 			}		
 			
 		}
-		sc1.close();
+//		sc1.close();
 		return new_trainer;
 	}
 
@@ -222,7 +230,7 @@ public class Presentation {
 
 		System.out.println("Pokemon Team: " );
 		for (int i=0;i<6;i++) {
-			if(trainer.team[i]==null) {
+			if(trainer.team[i]!=null) {
 				System.out.print(i+". "+trainer.team[i].name+" ");
 			}
 			else {
@@ -285,34 +293,32 @@ public class Presentation {
 
 			// 形式   fushigidane:0 
 			String[] input_array = input.split(":");
-
+			System.out.println("入力した文字は=" + input);
 			// INPUT エラーチェック
 			if (input_array.length < 2) {
 				System.out.println("INPUT形式不正のため、異常終了");
 				
-			}
+			}else {
 			
-			System.out.println("入力した文字は=" + input);
-			
-			for(Pokemon pkm : trainer.team) {
-				if(pkm!=null && pkm.name == input_array[0]) {
-					chosen_pkm=pkm;
+				for(int i=0;i<6;i++) {
+//					
+					if( trainer.team[i]!=null && trainer.team[i].name.equals(input_array[0])) {
+						chosen_pkm=trainer.team[i];
+//						System.out.println("見つかった");
+						break;
+					}
+
+//					System.out.println("この名前を持っているポケモン見つかりませんため、名前を入力し直しててください。\n");
+					
 				}
-				else {
-					System.out.println("この名前を持っているポケモン見つかりませんため、名前を入力し直しててください。\n");
-				}
-			}
 				
-			
-			
-			// INPUT エラーチェック
-			try{
-				choice=Integer.valueOf(input_array[1]);
+				try{
+					choice=Integer.valueOf(input_array[1]);
+				}
+				catch(Exception e){
+					System.out.println("INPUT形式不正のため、入力し直してください");
+				}
 			}
-			catch(Exception e){
-				System.out.println("INPUT形式不正のため、入力し直してください");
-			}
-			
 			
 			
 			if (chosen_pkm!=null && choice!=-1) {
