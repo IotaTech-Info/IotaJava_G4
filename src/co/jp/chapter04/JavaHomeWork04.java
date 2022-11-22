@@ -7,6 +7,7 @@ public class JavaHomeWork04 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
+		
         //問題１
         //解答：[0,0,0,0]
 	
