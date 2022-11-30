@@ -48,19 +48,33 @@ public class JavaHomeWork04 {
 		}
 		System.out.println("問題１の配列のSUMは"+sum);
 		
-		//問題７︓⾏列（２次元配列）の和と積を計算してください。
-		//回答：
-		int [][] array_Q7_1=new int[2][3];
-		int [][] array_Q7_2=new int[2][3];
-		int [][] sum_array_Q7=new int[2][3];
-		int [][] product_array_Q7=new int[2][3];
-		for (int i=0;i<2;i++) {
-			for (int j=0;j<3;j++) {
-				sum_array_Q7[i][j]=array_Q7_1[i][j]+array_Q7_2[i][j];
-				product_array_Q7[i][j]=array_Q7_1[i][j]*array_Q7_2[i][j];
-			}
-		}
+		
 		
 
+	}
+	//問題７︓⾏列（２次元配列）の和と積を計算してください。
+		//回答：
+	public static int addUp_2d_array(int[][] array_Q7) {
+		
+		int sum_array_Q7=0;
+		
+		for (int i=0;i<array_Q7.length;i++) {
+			for (int j=0;j<array_Q7[i].length;j++) {
+				sum_array_Q7+=array_Q7[i][j];
+				
+			}
+		}
+		return sum_array_Q7;
+	}
+	
+	public static int multiply_2d_array(int [][] array_Q7) {
+		int product_array_Q7=1;
+		for (int i=0;i<array_Q7.length;i++) {
+			for (int j=0;j<array_Q7[i].length;j++) {
+				
+				product_array_Q7+=array_Q7[i][j];
+			}
+		}
+		return product_array_Q7;
 	}
 }

@@ -56,7 +56,7 @@ public class JavaHomeWork05 {
 		//回答：
 		for (int i=0; i<Q3.length; ++i) {
 	    	if (Q3[i] ==7) {
-	    		System.out.println("「７」のインデックスは"+(i+1));
+	    		System.out.println("「７」のインデックスは"+(i));
 	    	}
 	    }
 		
@@ -86,7 +86,7 @@ public class JavaHomeWork05 {
 		System.out.println("LV10のパスカルの三⾓形：");
 		int[] row_PT = new int[1];
 		row_PT[0] = 1;
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 10; i++) {
 			for (int j : row_PT) {
 				System.out.print(j + " ");
 			}
@@ -104,7 +104,7 @@ public class JavaHomeWork05 {
 		}
 		next_row[next_row.length - 1] = 1;
 		return next_row;
-		}
+	}
 		
 	
 }
