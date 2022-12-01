@@ -61,7 +61,7 @@ public class JavaChapter04 {
 		
 		for(int i_2 = 0; i_2 < arr_m.length; i_2++) {
 			for(int j = 0; j < arr_m[i_2].length; j++);
-			System.out.println(arr_m[i_2][j] + ",");
+			System.out.println(arr_m[i_2][i_2] + ",");
 		}
 		
 		

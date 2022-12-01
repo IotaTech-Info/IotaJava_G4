@@ -43,7 +43,7 @@ public class JavaHomeWork01 {
 		
 		// 質問４︓ブリアン（ boolean ）変数に設定可能の値は「1」「0」。
 
-		
+		//0分。应该是true，false
 	}
 
 }

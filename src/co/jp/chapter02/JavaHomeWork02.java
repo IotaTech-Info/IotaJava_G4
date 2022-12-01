@@ -16,7 +16,7 @@ public class JavaHomeWork02 {
 //	質問３
 //	2.1.0F + ""
 		
-		
+		//应该是另一个。string.valueof()
 		
 //	質問４
 //	1.3.0

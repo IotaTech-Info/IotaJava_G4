@@ -63,7 +63,7 @@ public class JavaHomeWork05 {
 		}
 		
 		
-		//質問５︓質問３の配列に値「７」のインデックスを求む。
+		//質問５︓質問３の配列に値「７」のインデックスを求む。 0分
 		int position = 0;
 		for(int i_5 = 0; i_5 < array.length; i_5++) {
 			if (array[i_5] == 7) {
@@ -72,7 +72,7 @@ public class JavaHomeWork05 {
 		}
 		System.out.println("7の位置は" + position);
 		
-		//質問６︓任意⾏列（２次元配列）の積を求める。
+		//質問６︓任意⾏列（２次元配列）の積を求める。 0.5分
 		
 		int[][] array6 = new int[][] {{1,2,3,4,5},{1,2,3,4,5}};
 
@@ -93,7 +93,7 @@ public class JavaHomeWork05 {
 		
 		
 		
-		//質問７︓配列を昇順でソートする（java.util等メソッド利⽤禁⽌）。
+		//質問７︓配列を昇順でソートする（java.util等メソッド利⽤禁⽌）。 0.5分
 		
 		int [] array7 = new int [] {1,16,8,9,2};
 		int temp = 0;

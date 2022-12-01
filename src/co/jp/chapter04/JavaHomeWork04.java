@@ -10,6 +10,7 @@ public class JavaHomeWork04 {
 		// 問題１
 		
 		//0,0,0,0
+		// 0.5分，原因不明
 		
 		//int[] array = new int[4];
 		//System.out.println(Arrays.toString(array));
@@ -18,6 +19,7 @@ public class JavaHomeWork04 {
 		//問題２
 		
 		//5,6
+		// 0.5分，原因不明
 		
 //		int[]array = new int[] {5,6};
 //		System.out.println(Arrays.toString(array));
@@ -25,7 +27,9 @@ public class JavaHomeWork04 {
 		//問題３
 
 		// {{null,null,null} {null, null, null}}
-		
+		//应该用配列的方式写出来，
+		//array[0][0] = 0; array[0][1] = 0; array [0][2] = 0;
+		//array[1][0] = 0; array[1][1] = 0; array [1][2] = 0
 		
 		//問題４
 		
