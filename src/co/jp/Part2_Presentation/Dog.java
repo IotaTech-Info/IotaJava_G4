@@ -2,8 +2,25 @@ package co.jp.Part2_Presentation;
 
 public class Dog extends Pet implements Walk, Trim_Bath{
 
+ public Boolean servicedog;
+ 
+ 
 
 
+	public Dog(String name, int age, String type, boolean servicedog) {
+	super(name, age, type);
+	this.servicedog = servicedog;
+}
+
+	public Dog() {
+	super();
+	// TODO 自動生成されたコンストラクター・スタブ
+}
+
+public Dog(String name, int age, String type) {
+	super(name, age, type);
+	// TODO 自動生成されたコンストラクター・スタブ
+}
 
 	@Override
 	void eat() {
@@ -14,7 +31,7 @@ public class Dog extends Pet implements Walk, Trim_Bath{
 	@Override
 	public void walk() {
 		// TODO 自動生成されたメソッド・スタブ
-		System.out.println("Walking " + name);
+		System.out.println("Walking" + name);
 	}
 	@Override
 	public void trim_bath() {

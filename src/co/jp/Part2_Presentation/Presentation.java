@@ -8,9 +8,10 @@ public class Presentation {
 	public static void main(String[] args) {
 
 		
-		String[] hotel = new String[10];
+		Pet[] hotel = new Pet[10];
 		
 		int count = 0;
+		
 		
 		Dog myDog = new Dog();
 		Cat myCat = new Cat();
@@ -55,24 +56,60 @@ public class Presentation {
 					myCat.name = name;
 					myCat.age = age;
 				}
-				
+				Pet myPet = new Pet(name, age, type);
 				System.out.println("1から10までの部屋から選べます。入力してください。");
 				String input_room = sc_2.nextLine();
-				hotel[Integer.valueOf(input_room) -1] = "名前:" + name + " " + "年齢:" + age + " " + "TYPE:" + type;
+				hotel[Integer.valueOf(input_room) -1] = myPet;
 				
-				System.out.println("チェックイン完了。" + Arrays.toString(hotel));
+				System.out.println("チェックイン完了。");
+				int i;
+				for( i = 0; i < 9; i++); {
+					System.out.println(hotel[i].name + "," + hotel[i].type);
+					
+				}
+				
+
 			}
 			// feed
 			else if (input_fn == 2) {
-				System.out.println("部屋番号を入力してください。");
+				System.out.println("給食を始めます。部屋番号を入力してください。");
 				int input_room = sc_2.nextInt();
+				if (hotel[input_room - 1] != null){
+					if (hotel[input_room - 1].type == "DOG") {
+						myDog.setName(hotel[input_room - 1].name);
+						myDog.eat();
+					}
+					else {
+						myCat.setName(hotel[input_room - 1].name);
+						myCat.eat();
+					}
+					}
+				}
 
-			}
+			
 
 			// extra service
 			else if (input_fn == 3) {
-				System.out.println("部屋番号を入力してください。");
+				System.out.println("エクストラサービスを始めます。部屋番号を入力してください。");
 				int input_room = sc_2.nextInt();
+				if(hotel[input_room - 1] != null) {
+					System.out.println("何サービスがほしいですか。犬、猫が風呂、トリミングが１、犬の散歩は２。");
+					int input_service = sc_1.nextInt();
+					if (input_service == 1) {
+						if(hotel[input_service - 1].type =="DOG") {
+							myDog.setName(hotel[input_room - 1].name);
+							myDog.trim_bath();
+						}
+						else {
+							myCat.setName(hotel[input_room - 1].name);
+							myCat.trim_bath();
+						}
+					}
+					if (input_service ==2) {
+						myDog.walk();
+					}
+					;
+				}
 			}
 
 			// check out
