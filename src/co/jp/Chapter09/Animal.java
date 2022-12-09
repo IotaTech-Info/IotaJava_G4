@@ -1,11 +1,18 @@
 package co.jp.Chapter09;
 
-public abstract class Animal {
+public class Animal {
+	private int age;
+	private String name;
+	private String type;
 	
-	String name;
+	public Animal(String name) {
+		this.name = name;
+	}
 	
-//	void speak(){
-//	System.out.println("Hello World");
-	abstract void speck();
-
+	public void sayHello() {
+		System.out.println("hello");
+	}
+	public String getName() {
+		return name;
+	}
 }

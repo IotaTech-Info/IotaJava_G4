@@ -1,18 +1,15 @@
 package co.jp.Chapter09;
 
-public class Cat extends Animal implements Run {
 
-	@Override
-	void speck() {
-		// TODO 自動生成されたメソッド・スタブ
-		System.out.println("susu");
+public class Cat extends Animal {
+
+	public Cat(String name) {
+		super(name);
 	}
-
+	
 	@Override
-	public void run() {
-		// TODO 自動生成されたメソッド・スタブ
-		
+	public void sayHello() {
+		System.out.println("ニャー");
 	}
-
 
 }
