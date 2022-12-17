@@ -2,7 +2,7 @@ package co.jp.chapter10;
 
 public class Pet {
 	
-	
+//	質問１
 	public enum TYPE{
 		CAT(0),
 		DOG(1);

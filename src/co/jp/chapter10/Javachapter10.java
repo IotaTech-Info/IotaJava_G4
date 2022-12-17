@@ -23,10 +23,10 @@ public class Javachapter10 {
 		
 //		半角スペース
 //		String space = " ";
-////		
-////		全角スペース
+//		
+//		全角スペース
 //		String space_1 = "　";
-////		NULL
+//		NULL
 //		String str_n = null;
 
 		
