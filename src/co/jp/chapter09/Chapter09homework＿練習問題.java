@@ -27,8 +27,8 @@ public class Chapter09homework＿練習問題 {
 
 //	public class Kicker {
 //	 public static void main(String... args) {
-//	 new Thread() {
-//	 @Override                                                                     //在这一行使用了匿名class
+//	 new Thread() {															 //在这一行使用了匿名class
+//	 @Override                                                                    
 //	 public void run() {
 //	 System.out.println("thread running...");
 //	 }

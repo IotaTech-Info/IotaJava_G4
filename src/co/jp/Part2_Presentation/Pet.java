@@ -1,6 +1,6 @@
 package co.jp.Part2_Presentation;
 
-public class Pet {
+public abstract class Pet {
 
 	public String name;
 	public int age;
