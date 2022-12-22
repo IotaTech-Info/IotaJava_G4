@@ -5,11 +5,5 @@ public class Pet {
 	public String name;
 	public int age;
 	public Type type;
-	
-	
-	
 
-
-	
-	
 }

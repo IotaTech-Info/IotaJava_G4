@@ -65,29 +65,22 @@ public class JavaHomeWork10 {
 		System.out.println("バイト数は:" + value.getBytes().length);
 
 		System.out.println("桁数は:" + value.length());
-		
-		
-		//問題４
-		String a ="";
+
+		// 問題４
+		String a = "";
 		nullOrEmpty(a);
 
-		
 //		質問５︓以下仕様のフォーマティング指⽰コードを作成してくだい。
 //		 1. 浮動⼩数点数 
 //		2. ⻑さは5桁数 
 //		3. 精度は⼩数点後2位
-		 float b =123.141598f;
-		 System.out.println(String.format("%5.2f",b));
-		 
-		 
+		float b = 123.141598f;
+		System.out.println(String.format("%5.2f", b));
+
 //		 質問６︓整数16の16進数をSystem.out.println()してください。
 		int c = 16;
 		String num = Integer.toHexString(c);
 		System.out.println(num);
-		
-		
-		
-
 
 	}
 
@@ -116,29 +109,20 @@ public class JavaHomeWork10 {
 		return FileType;
 
 	}
-	
+
 //	問題４︓各現場は⽂字列に null ⼜は empty 判断要共通メソッドを実装しています。
 //	似て いるメソッドを実装してください。
-	
-	public static boolean nullOrEmpty(String value) { 
-	// value は null or Empty 判断してください。
-		if(value.length() == 0) {
-		System.out.println("文字列はempty");
-	 }
-		if(value == null) {
-		System.out.println("文字列はnuull");
+
+	public static boolean nullOrEmpty(String value) {
+		// value は null or Empty 判断してください。
+		if (value.length() == 0) {
+			System.out.println("文字列はempty");
+		}
+		if (value == null) {
+			System.out.println("文字列はnuull");
 		}
 		return true;
-		
+
 	}
-	
-
-	 
-	 
-	
-	
-	
-
-
 
 }
