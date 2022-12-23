@@ -1,22 +1,26 @@
 package co.jp.chapter06;
 
+import java.util.Arrays;
+
 public class JavaHomeWork06 {
 
-	/*
+	/* VPNを使ったせいか、commitしたら、接続がタイムアウトというエラーになります。申し訳ないが、こういう形で宿題を出しておきます。
+	
 	 * 質問１．以下関数の修飾⼦、返却型、関数名、引数（引数の型・名称）を回答してください。 public static void main(String[]
 	 * args);
 	 * 
-	 * 修飾⼦ public 返却型 void 関数名 main 引数 String[] args
+	 * 修飾⼦ public 返却型 void 関数名 main 引数名：args  引数の型：String[]
 	 */
 	
 	public static void main(String args[]) {
 	
 	// 質問２．配列の和、MAX値、MIN値を求める処理を関数化してください、main関数に呼び出してください。
+		
 		System.out.println("質問２");
 		int[] arr = new int[]{ 1, 2, 3, 4 };
 		System.out.println("配列の和は:" + sum(arr));
-		System.out.println("最大值：" + max(arr));
-		System.out.println("最小值：" + min(arr));
+		System.out.println("最大值MAX値：" + max(arr));
+		System.out.println("最小值MIN値：" + min(arr));
 		
 // 質問３．以下メソッドの実施結果を教えてください。 
 //		 public class Kicker {
@@ -100,28 +104,22 @@ public class JavaHomeWork06 {
 		
 		int[] left = new int[] { 1, 2, 3, 4 };
 		int[] right = new int[] { 5, 6, 7, 8 };
-		int[]result = megerArray(left,right);
-		for(int i = 0 ; i < result.length ; i++) {
-			System.out.print(result[i]);
-		}
-		System.out.println();
+		System.out.println("Meger Array:" + Arrays.toString(megerArray(left, right)));
 		
 			
-	 // 質問６-２︓以下静的なメソッドを定義してください。
+//      質問６-２︓以下静的なメソッドを定義してください。
 //	    1. メソッド名: subArray 
 //	    2. 引数１︓intの配列 array 
 //	    3. 引数２︓開始のstartIndex 
 //	    4. 引数３︓⻑さlength 
 //	    5. 戻り値︓intの配列 
 //	    6. 処理内容︓startIndexからstartIndex + lengthまでサブ配列を取得する
-		
-//		 public static int[] subArray(int[]array,int startIndex,int length) {
-//		    	int[] a = new int[length];
-//				for (int i = 0; i < length; i++) {
-//					a[i] = array[startIndex + i];
-//				}
-//				return a;
-//		 }
+
+		System.out.println("質問6-2");
+		int[] array_1 = new int[] {1,2,3,4,5};
+		int startIndex = 1;
+		int length = 3;
+		System.out.println("Sub Array:" + Arrays.toString(subArray(array_1, startIndex, length)));
 		
 //	    質問７︓以下静的なメソッドを定義してください。 
 //	    1. メソッド名︓trim 
@@ -134,6 +132,14 @@ public class JavaHomeWork06 {
 				//1 char[] input = new char[] {' ', ' ', 'A', 'b', ' ', ' ', 'C', ' '}; // 入力引数
 				//2  メソッドを実施後
 				//3 char[] output = new char[] {'A', 'b', ' ', ' ', 'C'}; // 入力引数
+		System.out.println("質問7");
+		char[] input = new char[] {' ', ' ', 'A', 'b', ' ', ' ', 'C', ' '};
+		 
+       		 char[] output =trim(input);
+ 
+        	System.out.println("input: " + Arrays.toString(input));
+        	System.out.println("output: " + Arrays.toString(output));
+		
 		
 		//質問８︓バブルソート⽤メソッドを作成してください。
 		
@@ -142,26 +148,17 @@ public class JavaHomeWork06 {
 				//3. 戻り値︓ソート済みの配列
 				//4. 処理内容︓bubbleSortアルゴリズムを⽤い、⼊⼒した引数の配列をソートしてください。
 		
-//		public static void bubbleSort(int []array) { 
-//			for(int i = 0 ; i < array.length - 1; i++) {
-//				for(int j = i + 1 ; j < array.length ; j++) {
-//					if ( array[i] > array[j]) {
-//						int a = array[j];
-//						array[j] = array[i];
-//						array[i] = a;
-//					}
-//				}
-//	      }
-//		}
+       		 System.out.println("質問8");
+		 int[] array8 = {4,6,2,8,2,5};
+		 System.out.println("bubbleSort Array:" + Arrays.toString(bubbleSort(array8)));
 		
 		//質問９︓メソッドの呼び出す練習。
 				//1. 質問６-１を⽤い、２つ配列をマージします。
 				//2. 質問８を⽤い、ステップ１のマージした配列をソートする。
 				//3. 注意︓コードを１⾏にしてください。
 		
-	}
-	
-
+		 
+	}	
 	
 	//質問2
 	
@@ -196,18 +193,67 @@ public class JavaHomeWork06 {
 
 	 //質問６—1
 	
-  public static int[] megerArray(int[]left,int[]right) {
-	int [] array = new int [left.length + right.length];
-	int a = 0;
-	for (int i = 0; i < left.length; i++) {
-		array[a] = left[i];
-		a++;
+	public static int[] megerArray(int[] left, int[] right) {
+		int[] array_meger = new int[left.length + right.length];
+		for (int i = 0; i < array_meger.length; i++) {
+			if (i < left.length) {
+				array_meger[i] = left[i];
+			} else {
+				array_meger[i] = right[i - left.length];
+			}
+		}
+		return array_meger;
 	}
-	for (int i = 0; i < right.length; i++) {
-		array[a] = right[i];
-		a++;
+
+  //質問6−2
+	public static int[] subArray(int[] array, int startIndex, int length) {
+		int[] array_sub = new int[length];
+		
+		for(int i = 0; i < length; i++) {
+			array_sub[i] = array[startIndex + i];
+		}
+		return array_sub;		
+		
 	}
-	return array;
-  }
-  
+ //質問7
+	public static char[] trim(char[] input) {
+		int i = 0, j = input.length - 1;
+		char[] output = null;
+		while (input[i] == ' ') {
+			i++;
+		}
+
+		while (input[j] == ' ') {
+			j--;
+
+		}
+		output = subArray(input, i, j - i + 1);
+
+		return output;
+	}
+
+	public static char[] subArray(char[] array, int startIndex, int length) {
+		int k = 0, i = startIndex;
+		char[] sub = new char[length];
+		while (k < length) {
+			sub[k++] = array[i++];
+		}
+		return sub;
+	}
+	
+	
+  //質問8
+  	public static int[] bubbleSort(int[] array) {
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = 0; j < array.length - 1 - i; j++) {
+				if (array[j] > array[j + 1]) {
+					int temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+				}
+
+			}
+		}
+		return array;
+	}
 }
