@@ -1,0 +1,164 @@
+package co.jp.chapter10;
+
+public class JavaHomeWork10 {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		/*質問１︓以下３⾏⽂字列を「改⾏コード」と「,」を分割して２つペットオブジェクトを 作成してください。 
+		 * 1. Petクラスを事前作成してください。
+		 *  2. ペットのタイプは列挙型である︓type = 0︓猫、type = 1︓⽝ 
+		 *  ペット病院⽤ペットマスタデータは以下通りです。（ファイルから読み取り不要）
+		 *	1 name, age, type
+			2 みみ, 10, 1
+			3 レオ, 1, 0
+			4 マル,2,0               */
+		// 質問1：
+
+		 		Pet pet_1 = new Pet();
+		 		Pet pet_2 = new Pet();
+		 		Pet pet_3 = new Pet();
+		 		
+				String str_Data = "みみ,10,1\n"+ "レオ,1,0\n"+ "マル,2,0";
+				
+				String[] arr = str_Data.split("\n");
+				String pet01 = arr[0];
+				String pet02 = arr[1];
+				String pet03 = arr[2];
+				
+				String[] arr_1 = pet01.split(",");
+				String[] arr_2 = pet02.split(",");
+				String[] arr_3 = pet03.split(",");
+				
+				pet_1.name = arr_1[0];
+				pet_1.age = Integer.valueOf(arr_1[1]);
+				
+				pet_2.name = arr_2[0];
+				pet_2.age = Integer.valueOf(arr_2[1]);
+				
+				pet_3.name = arr_3[0];
+				pet_3.age = Integer.valueOf(arr_3[1]);
+				
+				String type_cat = Type.CAT.getType_number();
+				String type_dog = Type.DOG.getType_number();
+				
+//		質問２︓Windowsは各ファイルの拡張⼦を持っています。
+//		例 「新規ドキュメント.docx」 の拡張⼦は「docx」である。
+//		メソッドを作成して、ファイルパス（String型）から拡張⼦ を取得してください。
+		
+//		public static String getFileType(String path) {
+//			// return ??
+//		}
+//		public static void main(String...args) {
+//			 System.out.println(getFileType("c://windows//aa.xlsx")); // xlsx
+//			 System.out.println(getFileType("c://windows//a a.test")); // test
+//			 System.out.println(getFileType("c://windows//aa.bb.docx")); // docx
+//			 System.out.println(getFileType("c://windows//aaaaa")); // Empty
+//		}
+		 System.out.println("質問2");
+		 System.out.println(getFileType("c://windows//aa.xlsx")); // xlsx
+		 System.out.println(getFileType("c://windows//a a.test")); // test
+		 System.out.println(getFileType("c://windows//aa.bb.docx")); // docx
+		 System.out.println(getFileType("c://windows//aaaaa")); // Empty
+		 
+		// 質問３︓Javaには、すべての⽂字コードはUTF-8であり。
+		 //⽇本語（全⾓⽂字）の場合１⽂ 字 = 3バイト。以下⽂字列のバイト数と桁数を求めてください。
+		 //public static void main(String...args) {
+		 //String value = ”abced12345あいうえお１２３４５”;
+		 // バイト数は？　➡︎40
+		 //　桁数は？　　　➡︎20
+		
+		System.out.println("質問3");
+		String value = "abced12345あいうえお１２３４５";
+
+		System.out.println("文字列のバイト数は:" + value.getBytes().length);
+
+		System.out.println("文字列の桁数は:" + value.length());
+		
+		
+		//質問４︓各現場は⽂字列に null ⼜は empty 判断要共通メソッドを実装しています。
+		//似ているメソッドを実装してください。
+		//public static boolean nullOrEmpty(String value) {
+		// value は null or Empty 判断してください。
+		//}
+		
+//		public static boolean nullOrEmpty(String value) {
+//			
+//			if(value==null) {
+//				return false;
+//			}
+//			
+//			if(value.isEmpty()) {
+//				return true;
+//			}
+//			return false;
+//		}
+		
+		//質問５︓以下仕様のフォーマティング指⽰コードを作成してくだい。 
+		//1. 浮動⼩数点数 2. ⻑さは5桁数 3. 精度は⼩数点後2位
+		
+		System.out.println("質問5");
+		float num = 4.311546f;
+		System.out.println(String.format("%05.2f", num));
+		
+		
+		// 質問6：整数16の16進数をSystem.out.println()してください。
+		System.out.println("質問6");
+		System.out.println(Integer.toHexString(16));
+	}
+	
+	//質問2
+	public static String getFileType(String path) {
+		String type="";
+		for(int i=path.length()-1;i>=0;i--) {
+			if(path.charAt(i)=='.') {
+				type=path.substring(i+1);
+				return type;
+			}
+		}
+		return type;		
+	}
+	
+	
+}
+
+/*package co.jp.chapter10;
+
+public class Pet {
+	public String name;
+	public int age;
+	public Type type;
+	
+	public Pet(String name, int age, Type type) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.type = type;
+	}
+
+	public Pet() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
+*/
+/*
+package co.jp.chapter10;
+
+public enum Type {
+	CAT("0"),
+	DOG("1");
+	private final String type_number;
+	
+	private Type(String type_number) {
+		this.type_number = type_number;
+		
+	}
+	
+	public String getType_number() {
+		return type_number;
+	}
+
+		
+}
+*/
+
