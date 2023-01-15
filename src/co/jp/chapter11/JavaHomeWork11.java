@@ -36,7 +36,7 @@ public class JavaHomeWork11 {
 			System.out.println(s.getName());
 			if(s.getName().equals("新橋駅")) {
 				isyamanote=true;
-				break;
+				
 			}
 		}
 		System.out.println("新橋駅は山手線の駅？"+isyamanote);
