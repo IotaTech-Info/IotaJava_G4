@@ -1,10 +1,10 @@
 package co.jp.chapter11;
 
+import java.util.List;
+
 public class Line {
-
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-
-	}
-
+	
+	public String name;
+	public List<Station> stations;
+	
 }
