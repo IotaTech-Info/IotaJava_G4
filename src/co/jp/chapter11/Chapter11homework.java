@@ -6,6 +6,7 @@ import java.util.List;
 public class Chapter11homework {
 
 	
+	
 //		質問１︓駅クラス（Station）、路線クラス（Line）を作成して。路線をインスタンス化し
 //		てオブジェクト「⼭⼿線」を作成してください。「⼭⼿線」に各駅情報を追加してくださ
 //		い。
@@ -43,13 +44,26 @@ public class Chapter11homework {
 //			質問３︓10両編成している通勤電⾞、各⾞の定員は5⼈です。31⼈の乗⾞の状況をプログ
 //			ラミングしてください。（for⽂で旅客作成しても構わない）
 						
+			 Integer[][] carriage = new Integer[10][5];
 			 
+			 List<String> Railway = new ArrayList<>();
 			
-			
-			
+			int count =0;
+			int passenger = 31;
+			 
+			 for(int i = 0; i <= 10; i++) {
+					for(int j = 0; j <= 5; j++) {
+						Railway.add("乗客");
+						count++;
+						if (count == passenger) {
+							System.out.println(Railway);
+							break;
+						}
 			}
 		
 
-	
+			 }
 
+}
+		
 }
