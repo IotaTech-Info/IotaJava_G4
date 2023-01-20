@@ -1,5 +1,6 @@
 package co.jp.chapter11;
 
+
 public class Station {
 	private String name;
 

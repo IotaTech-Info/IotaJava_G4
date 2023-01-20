@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class JavaHomeWork11 {
 	public static void main(String[] args) {
+
 //		質問１︓駅クラス（Station）、路線クラス（Line）を作成して。路線をインスタンス化し
 //		てオブジェクト「⼭⼿線」を作成してください。「⼭⼿線」に各駅情報を追加してくださ
 //		い。
@@ -65,6 +66,7 @@ public class JavaHomeWork11 {
 
 //		質問３︓10両編成している通勤電⾞、各⾞の定員は5⼈です。31⼈の乗⾞の状況をプログ
 //		ラミングしてください。（for⽂で旅客作成しても構わない）
+		
 		Map<String, String> train = new HashMap<>();
 		int passenger = 31;
 		int train_space = 5;
