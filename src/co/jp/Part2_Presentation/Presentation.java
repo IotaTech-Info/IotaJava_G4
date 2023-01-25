@@ -5,9 +5,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class Presentation {
@@ -28,6 +30,7 @@ public class Presentation {
 		Calendar c = Calendar.getInstance();
 		c.setTime(currentDate);
 		
+		List<String> vip = new ArrayList<>();
 		 
 //		 String name = "";
 //		 int age = 0;
@@ -44,7 +47,7 @@ public class Presentation {
 		for (;;) {
 		
 
-			System.out.println("---ループ開始。0は空室チェック、１はチェックイン、２は給食、３は他サービス、４はチェックアウト、5は意見を書く、6は退出");
+			System.out.println("---ループ開始。0は空室チェック、１はチェックイン、２は給食、３は他サービス、４はチェックアウト、5は意見を書く、6会員になる、7は退出");
 			int input_fn = sc_1.nextInt();
 
 
@@ -156,10 +159,14 @@ public class Presentation {
 					 e.printStackTrace();
 					}
 			}
-				
+			else if (input_fn == 6) {
+				System.out.println("----- 名前を書いてください。 -----");
+				String input_vipname = sc_3.nextLine();
+				vip.add(input_vipname);
+			}
 			
 			// Manually exit
-			else if (input_fn == 6) {
+			else if (input_fn == 7) {
 				System.out.println("----- システム終了 -----");
 				break;
 			}
