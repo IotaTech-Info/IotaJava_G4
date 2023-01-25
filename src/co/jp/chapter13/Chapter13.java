@@ -1,7 +1,5 @@
 package co.jp.chapter13;
 
-import java.io.File;
-
 public class Chapter13 {
 
 	public Chapter13() {
@@ -13,10 +11,7 @@ public class Chapter13 {
 
 		// input
 		//File Object
-		File dummy_File("");
-		
-		System.out.println(dummy_File.toString());
-		
+
 		
 	}
 

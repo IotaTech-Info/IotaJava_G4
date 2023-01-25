@@ -27,7 +27,7 @@ public class Chapter13Homework {
 		
 		//質問２︓CSV編集ツールを作成してください。
 		
-		//WritedatatoCSV.java
+		//WritedatatoCSV.javaで参照してください。
 	}
 
 
