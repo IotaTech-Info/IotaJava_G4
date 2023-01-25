@@ -1,5 +1,10 @@
 package co.jp.Part2_Presentation;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -15,15 +20,14 @@ public class Presentation {
 		
 		int count = 0;
 		
-		
+		 
 		 Dog myDog = new Dog();
 		 Cat myCat = new Cat();
 		 
 		Date currentDate = new Date();
-		Calendar startdate = Calendar.getInstance();
-		startdate.setTime(currentDate);
+		Calendar c = Calendar.getInstance();
+		c.setTime(currentDate);
 		
-		startdate.add(Calendar.DATE, 1);
 		 
 //		 String name = "";
 //		 int age = 0;
@@ -40,7 +44,7 @@ public class Presentation {
 		for (;;) {
 		
 
-			System.out.println("---ループ開始。0は空室チェック、１はチェックイン、２は給食、３は他サービス、４はチェックアウト、5は退出");
+			System.out.println("---ループ開始。0は空室チェック、１はチェックイン、２は給食、３は他サービス、４はチェックアウト、5は意見を書く、6は退出");
 			int input_fn = sc_1.nextInt();
 
 
@@ -61,18 +65,20 @@ public class Presentation {
 				if (type.equals("DOG")) {
 					myDog.type = "DOG";
 					myDog.name = name;
-					myDog.age = age;
+					myDog.age = age;			
+					System.out.println("1から10までの部屋から選べます。入力してください。");
+					String input_room = sc_2.nextLine();
+					hotel[Integer.valueOf(input_room) - 1] = myDog;
+					
 				}
 				if(type.equals("CAT")) {
 					myCat.type = "CAT";
 					myCat.name = name;
-					myCat.age = age;
+					myCat.age = age;					
+					System.out.println("1から10までの部屋から選べます。入力してください。");
+					String input_room = sc_2.nextLine();
+					hotel[Integer.valueOf(input_room) - 1] = myCat;
 				}
-				Pet myPet = new Pet(name, age, type);
-				System.out.println("1から10までの部屋から選べます。入力してください。");
-				String input_room = sc_2.nextLine();
-				hotel[Integer.valueOf(input_room) - 1] = myPet;
-
 				System.out.println("チェックイン完了。");
 				int i;
 				for (i = 0; i < hotel.length; i++)
@@ -137,28 +143,30 @@ public class Presentation {
 				System.out.println("チェックアウト完了");
 
 			}
-			// Manually exit
+			//意見
 			else if (input_fn == 5) {
+				System.out.println("意見を入力してください。");
+				try {
+					 Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\Dolly\\Desktop\\claim\\claim.txt"),
+					 "UTF-8"));
+					 String  input_claim= sc_3.nextLine();
+					 out.write(input_claim + c.getTime());
+					 out.close();
+					} catch (IOException e) {
+					 e.printStackTrace();
+					}
+			}
+				
+			
+			// Manually exit
+			else if (input_fn == 6) {
 				System.out.println("----- システム終了 -----");
 				break;
 			}
 
 			
 
-		}
-	}
-	
-	static String checkin(String input) {
 		
-		String rtn = "OK";
-		
-		String[]input_arr = sc_2.nextLine();
-		
-		switch(type) {
-		case "DOG":
-			Dog dog = new Dog(name, age, type);
-			hotel[0] = dog;
-			break;l
 			
 		}
 	}
