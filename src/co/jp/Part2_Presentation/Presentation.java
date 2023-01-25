@@ -1,32 +1,44 @@
 package co.jp.Part2_Presentation;
 
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Presentation {
-
-	public static void main(String[] args) {
-
 		
-		Pet[] hotel = new Pet[10];
+	static Pet[] hotel = new Pet[10];
+	
+
+	
+	public static void main(String[] args) {
 		
 		int count = 0;
 		
 		
-		Dog myDog = new Dog();
-		Cat myCat = new Cat();
+		 Dog myDog = new Dog();
+		 Cat myCat = new Cat();
+		 
+		Date currentDate = new Date();
+		Calendar startdate = Calendar.getInstance();
+		startdate.setTime(currentDate);
 		
-		Scanner sc_1 = new Scanner(System.in);
-		Scanner sc_2 = new Scanner(System.in);
-		Scanner sc_3 = new Scanner(System.in);
-
+		startdate.add(Calendar.DATE, 1);
+		 
+//		 String name = "";
+//		 int age = 0;
+//		 String type = "";
+		
+		 Scanner sc_1 = new Scanner(System.in);
+		 Scanner sc_2 = new Scanner(System.in);
+		 Scanner sc_3 = new Scanner(System.in);
+		
 		
 		System.out.println("----- いらっしゃいませ。ペットホテルへようこそ。現在の空室状況は -----");
 		System.out.println("hotel: " + Arrays.toString(hotel));
 		
 		for (;;) {
-			
-			// TODO 機能のループ (Add a "if" loop when input error occurs)
+		
 
 			System.out.println("---ループ開始。0は空室チェック、１はチェックイン、２は給食、３は他サービス、４はチェックアウト、5は退出");
 			int input_fn = sc_1.nextInt();
@@ -59,15 +71,20 @@ public class Presentation {
 				Pet myPet = new Pet(name, age, type);
 				System.out.println("1から10までの部屋から選べます。入力してください。");
 				String input_room = sc_2.nextLine();
-				hotel[Integer.valueOf(input_room) -1] = myPet;
-				
+				hotel[Integer.valueOf(input_room) - 1] = myPet;
+
 				System.out.println("チェックイン完了。");
 				int i;
-				for( i = 0; i < 9; i++); {
-					System.out.println(hotel[i].name + "," + hotel[i].type);
-					
+				for (i = 0; i < hotel.length; i++)
+					;
+				{
+					if (hotel[i] != null) {
+						System.out.println(hotel[i].name + "," + hotel[i].type);
+					} else {
+						System.out.println("空室");
+					}
+
 				}
-				
 
 			}
 			// feed
@@ -130,4 +147,21 @@ public class Presentation {
 
 		}
 	}
+	
+	static String checkin(String input) {
+		
+		String rtn = "OK";
+		
+		String[]input_arr = sc_2.nextLine();
+		
+		switch(type) {
+		case "DOG":
+			Dog dog = new Dog(name, age, type);
+			hotel[0] = dog;
+			break;l
+			
+		}
+	}
 }
+
+
