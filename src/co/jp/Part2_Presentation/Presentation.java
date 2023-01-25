@@ -19,10 +19,8 @@ public class Presentation {
 
 	
 	public static void main(String[] args) {
-		
-		int count = 0;
-		
-		 
+	
+			 
 		 Dog myDog = new Dog();
 		 Cat myCat = new Cat();
 		 
