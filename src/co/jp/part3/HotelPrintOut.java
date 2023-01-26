@@ -10,8 +10,8 @@ import java.io.Writer;
 public class HotelPrintOut {
 	public static void PrintOut(Hotel[] hotel) {
 		try {
-			File file = new File("./HotelPrintOut/HotelStatus.txt");
-			// File file = new File("./bin/co/jp/part3/HotelStatus.txt");
+			// File file = new File("./HotelPrintOut/HotelStatus.txt");
+			File file = new File("./bin/co/jp/part3/HotelStatus.txt");
 
 			if (file.exists()) {
 				Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
