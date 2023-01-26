@@ -24,6 +24,7 @@ public class Presentation {
 		 Dog myDog = new Dog();
 		 Cat myCat = new Cat();
 		 
+		 
 		Date currentDate = new Date();
 		Calendar c = Calendar.getInstance();
 		c.setTime(currentDate);
@@ -51,8 +52,21 @@ public class Presentation {
 
 			// room check
 			if(input_fn ==0) {
-				System.out.println("hotel: " + Arrays.toString(hotel));
+				int i;
+				for (i = 0; i < hotel.length-1; i++)
+					{
+					if (hotel[i] != null) {
+						System.out.println(hotel[i].name + "," + hotel[i].type);
+					} 
+				else {
+						System.out.println("空室");
+					}
+
+				}
+
 			}
+			
+			
 
 			// check in
 			else if (input_fn ==1) {
@@ -69,25 +83,26 @@ public class Presentation {
 					myDog.age = age;			
 					System.out.println("1から10までの部屋から選べます。入力してください。");
 					String input_room = sc_2.nextLine();
-					hotel[Integer.valueOf(input_room) - 1] = myDog;
-					
-				}
-				if(type.equals("CAT")) {
+					Pet myPet = myDog;
+					hotel[Integer.valueOf(input_room) - 1] = myPet;	
+					}
+				else if (type.equals("CAT")) {
 					myCat.type = "CAT";
 					myCat.name = name;
 					myCat.age = age;					
 					System.out.println("1から10までの部屋から選べます。入力してください。");
 					String input_room = sc_2.nextLine();
-					hotel[Integer.valueOf(input_room) - 1] = myCat;
+					Pet myPet = myCat;
+					hotel[Integer.valueOf(input_room) - 1] = myPet;
 				}
 				System.out.println("チェックイン完了。");
+				//Print Room Information
 				int i;
-				for (i = 0; i < hotel.length; i++)
-					;
-				{
+				for (i = 0; i < hotel.length-1; i++){
 					if (hotel[i] != null) {
 						System.out.println(hotel[i].name + "," + hotel[i].type);
-					} else {
+					} 
+				else {
 						System.out.println("空室");
 					}
 
@@ -161,6 +176,7 @@ public class Presentation {
 				System.out.println("----- 名前を書いてください。 -----");
 				String input_vipname = sc_3.nextLine();
 				vip.add(input_vipname);
+				System.out.println("会員リスト" + vip);
 			}
 			
 			// Manually exit
