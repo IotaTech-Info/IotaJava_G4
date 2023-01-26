@@ -107,7 +107,7 @@ public class PresentationCheckin {
 				}
 				if(flag) {
 					System.out.println("予約見つかった");
-					hotel.get(i).checkin();
+					hotel_guest.get(i).checkin();
 					break;
 				}
 				else {
@@ -140,6 +140,14 @@ public class PresentationCheckin {
 			}
 		}
 		try {
+			BufferedReader br1 = new BufferedReader(new InputStreamReader(new FileInputStream("D:\\Downloads\\pleiades\\workspace\\IotaJava_G4\\src\\co\\jp\\part3\\checkinfo.txt"),"UTF-8"));
+			String line1;
+			String result = "";
+			while ((line1 = br1.readLine()) != null) {
+				result += line1;
+				result += '\n';
+			}
+			br1.close();
 			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\Downloads\\pleiades\\workspace\\IotaJava_G4\\src\\co\\jp\\part3\\checkinfo.txt"),
 					 "UTF-8"));
 			for(int i = 0; i < hotel.size(); i++) {
@@ -147,6 +155,7 @@ public class PresentationCheckin {
 				SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 				hotel.get(i).checktime =simpleDateFormat.format(date);
 				String infomation = hotel.get(i).name + " " + String.valueOf(hotel.get(i).age) + " " + hotel.get(i).type + " " + String.valueOf(hotel.get(i).sex) + " " + hotel.get(i).checktime;
+				out.write(result);
 				out.write(infomation);
 				out.write("\n");
 			}
