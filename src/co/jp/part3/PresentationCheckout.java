@@ -84,7 +84,7 @@ public class PresentationCheckout {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date checkday = simpleDateFormat.parse(hotel.get(i).checktime);
 		Date today = simpleDateFormat.parse(simpleDateFormat.format(new Date()));
-		long daydiff = (checkday.getTime() - today.getTime()) / 86400000;
+		long daydiff = (today.getTime() - checkday.getTime()) / 86400000;
 		System.out.println(hotel.get(i).name + "は" + daydiff + "日間滞在しました");
 		hotel.remove(i);
 		System.out.println("チェックアウトしました");

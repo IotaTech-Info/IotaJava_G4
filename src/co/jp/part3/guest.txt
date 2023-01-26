@@ -1,0 +1,2 @@
+Tom 3 cat MALE
+Je 1 dog NONE
