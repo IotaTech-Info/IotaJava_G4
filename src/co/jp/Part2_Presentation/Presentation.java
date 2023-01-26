@@ -163,7 +163,7 @@ public class Presentation {
 			else if (input_fn == 5) {
 				System.out.println("意見を入力してください。");
 				try {
-					 Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\Dolly\\Desktop\\claim\\claim.txt"),
+					 Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\Dolly\\Documents\\Workspace\\IotaJava_G4\\src\\co\\jp\\Part2_Presentation\\claim.txt"),
 					 "UTF-8"));
 					 String  input_claim= sc_3.nextLine();
 					 out.write(input_claim + c.getTime());
