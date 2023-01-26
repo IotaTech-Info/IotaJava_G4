@@ -90,6 +90,8 @@ public class PetHotel {
 		room.setStatus(false);
 		System.out.println("部屋"+roomNo+"予約しました");
 		print();
+		
+			
 		}else {
 			room.setStatus(false);
 			System.out.println("この部屋が予約されました");
@@ -101,15 +103,15 @@ public class PetHotel {
 		try {
 			Date orderDate = orderTime.parse(dateString);
 			System.out.println("you are already order the room at"+ orderDate);
-			
+		
 			Date currentDate = new Date();
 			Calendar c =Calendar.getInstance();
 			c.setTime(currentDate);
-			
+		
 			c.add(Calendar.DATE, 3);
-			
+		
 			Date checkinTime = c.getTime();
-			
+		
 			String checkinTime_str = orderTime.format(checkinTime);
 			System.out.println("Please check in befor" +checkinTime_str);
 		} catch (ParseException e) {

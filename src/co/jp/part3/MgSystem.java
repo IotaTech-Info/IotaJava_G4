@@ -7,7 +7,11 @@ public class MgSystem {
 	
 	static Scanner sc = new Scanner(System.in);
 	static PetHotel myPetHotel = new PetHotel();
+	
 	public static void main(String[] args) {
+	System.out.println("Please select your identify.1,guest,2,manager");
+	
+	myPetHotel.petHotel();
 	
 	int statusNumber = sc.nextInt();
 	if(statusNumber == 1) {
@@ -48,11 +52,11 @@ public class MgSystem {
 		}
 		
 	} else if (statusNumber == 2) {
-		String passWord = "AdminZYR";
+//		String passWord = "AdminZYR";
 		System.out.println("please enter password.");
 		String password = sc.next();
 		
-		if(password == passWord) {
+		if(password == "AdminZYR") {
 			
 			while(true) {
 				System.out.println("select the option. 1.enter the pet'message.2.print the message list.");
@@ -74,9 +78,11 @@ public class MgSystem {
 				}
 			}
 		} else {
-		System.out.println("error.");
+			System.out.println("Wrong Password.");
 		}
+	}else {
+		System.out.println("error");
 	}
 	
-}
+	}
 }
