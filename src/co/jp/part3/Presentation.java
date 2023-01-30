@@ -13,7 +13,6 @@ enum People {
   
 public class Presentation {
 
-	
 	public static void main(String[] args) throws IOException {
 		// TODO 自動生成されたメソッド・スタブ
 		Person[] person = new Person[10];
@@ -134,7 +133,6 @@ public class Presentation {
 						System.out.println("person: " + Arrays.toString(person));
 					
 					}
-					
 					
 					break;
 				//Searching people
