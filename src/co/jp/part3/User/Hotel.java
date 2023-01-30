@@ -1,7 +1,7 @@
 package co.jp.part3.User;
 
-import co.jp.part2.RoomStatus;
-import co.jp.part2.Pet.Pet;
+import co.jp.part3.RoomStatus;
+import co.jp.part3.Pet.Pet;
 
 public class Hotel {
 

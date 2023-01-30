@@ -10,19 +10,19 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
 
-import co.jp.part2.PetType;
-import co.jp.part2.RoomStatus;
+import co.jp.part3.PetType;
+import co.jp.part3.RoomStatus;
 
 public class Admin {
-	Map<String, String> userlist;
+	Map<String, String> usermap;
 	
 	
-	public Map<String, String> getUserlist() {
-		return userlist;
+	public Map<String, String> getUsermap() {
+		return usermap;
 	}
 
-	public void setUserlist(Map<String, String> userlist) {
-		this.userlist = userlist;
+	public void setUsermap(Map<String, String> usermap) {
+		this.usermap = usermap;
 	}
 
 	public void AdminForm(Hotel[] hotel, String user) {
@@ -102,7 +102,7 @@ public class Admin {
 				System.out.println("空白は使いません。");
 				continue;
 			}
-			if (userlist.containsKey(new_userid) || "admin".equals(new_userid)) {
+			if (usermap.containsKey(new_userid) || "admin".equals(new_userid)) {
 				System.out.println("このユーザーが既に存在しています。");
 				continue;
 			} 
@@ -124,11 +124,11 @@ public class Admin {
 			}
 			break;
 		}
-		userlist.put(new_userid, new_psw);
+		usermap.put(new_userid, new_psw);
 		try {
-			 Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\workspace\\IotaJava_G4\\src\\co\\jp\\part2\\userpass.txt"),
+			 Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\workspace\\IotaJava_G4\\src\\co\\jp\\part3\\userpass.txt"),
 			 "UTF-8"));
-			 for(Map.Entry<String, String> entry : userlist.entrySet()) {
+			 for(Map.Entry<String, String> entry : usermap.entrySet()) {
 				 out.write(entry.getKey()+","+entry.getValue()+"\r\n");
 			 }
 			 out.close();

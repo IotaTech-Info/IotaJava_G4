@@ -10,16 +10,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import co.jp.part2.User.Admin;
-import co.jp.part2.User.Guest;
-import co.jp.part2.User.Hotel;
+import co.jp.part3.User.Admin;
+import co.jp.part3.User.Guest;
+import co.jp.part3.User.Hotel;
 
 public class PetHotalSystemMain {
 	private static final String super_pwd = "admin";
 	private static final String super_user = "admin";
 	static String user;// ユーザーから入力
 	static String pwd;// ユーザーから入力
-	static Map<String, String> userlist = new HashMap<>();// ファイルから書き込み、ユーザー情報
+	static Map<String, String> usermap = new HashMap<>();// ファイルから書き込み、ユーザー情報
 
 	public static void main(String[] args) {
 		// ホテル、キャラ初期化
@@ -62,9 +62,9 @@ public class PetHotalSystemMain {
 			case 2:
 				if (AdminEntry()) {
 					if(super_user.equals(user)) {
-						ad.setUserlist(userlist);
+						ad.setUsermap(usermap);
 					}else {
-						ad.setUserlist(new HashMap<>());
+						ad.setUsermap(new HashMap<>());
 					}
 					ad.AdminForm(ho, user);
 				}
@@ -88,12 +88,12 @@ public class PetHotalSystemMain {
 	public static boolean AdminEntry() {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
-					new FileInputStream("D:\\workspace\\IotaJava_G4\\src\\co\\jp\\part2\\userpass.txt"), "UTF-8"));
+					new FileInputStream("D:\\workspace\\IotaJava_G4\\src\\co\\jp\\part3\\userpass.txt"), "UTF-8"));
 			String line;
-			userlist=new HashMap<String, String>();
+			usermap=new HashMap<String, String>();
 			while ((line = br.readLine()) != null) {
 				String s[] = line.split(",");
-				userlist.put(s[0], s[1]);
+				usermap.put(s[0], s[1]);
 			}
 			br.close();
 		} catch (IOException e) {
@@ -127,7 +127,7 @@ public class PetHotalSystemMain {
 	private static boolean datacheck(String user, String pwd) {
 
 		
-		for (Map.Entry<String, String> entry : userlist.entrySet()) {
+		for (Map.Entry<String, String> entry : usermap.entrySet()) {
 			if (entry.getKey().equals(user) && entry.getValue().equals(pwd)) {
 				return true;
 			}

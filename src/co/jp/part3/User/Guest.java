@@ -2,12 +2,12 @@ package co.jp.part3.User;
 
 import java.util.Scanner;
 
-import co.jp.part2.PetType;
-import co.jp.part2.RoomStatus;
-import co.jp.part2.Pet.Bird;
-import co.jp.part2.Pet.Cat;
-import co.jp.part2.Pet.Dog;
-import co.jp.part2.Pet.Pet;
+import co.jp.part3.PetType;
+import co.jp.part3.RoomStatus;
+import co.jp.part3.Pet.Bird;
+import co.jp.part3.Pet.Cat;
+import co.jp.part3.Pet.Dog;
+import co.jp.part3.Pet.Pet;
 
 public class Guest {
 
