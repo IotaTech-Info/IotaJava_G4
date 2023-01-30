@@ -17,12 +17,10 @@ public class Presentation {
 	public static void main(String[] args) throws IOException {
 		// TODO 自動生成されたメソッド・スタブ
 		Person[] person = new Person[10];
-		
+		//*Collection
 		HashSet<Integer> IDs = new HashSet<Integer>();
 		
-		
-		
-		//building a BufferedWriter for file I/O
+		//*Building a BufferedWriter for file I/O
 		BufferedWriter out = null;
 		try {
 			File writename = new File("/Users/hong/Downloads/school.txt"); 
@@ -36,7 +34,7 @@ public class Presentation {
 		//choosing
 		for (;;) {
 			//File IO
-			System.out.println("choosing an operation: 1 Searching people, 2 Adding people, 3 Deleting people, 4 Listing all people, 5 exit,");
+			System.out.println("choosing an operation: 1 Searching people, 2 Adding people, 3 Deleting people, *4 Listing all people, 5 exit,");
 			Scanner sc3 = new Scanner(System.in);
 			String input = sc3.nextLine();
 			
@@ -56,18 +54,15 @@ public class Presentation {
 				case 4: 
 	                System.out.println("The all people are listign below: ");
 					try {		            
-			            String pathname = "/Users/hong/Downloads/school.txt"; // 绝对路径或相对路径都可以，这里是绝对路径，写入文件时演示相对路径
-						File filename = new File(pathname); // 要读取以上路径的文件
-						InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // 建立一个输入流对象reader
-						BufferedReader br = new BufferedReader(reader); // 建立一个对象，它把文件内容转成计算机能读懂的语言
+			            String pathname = "/Users/hong/Downloads/school.txt"; 
+						File filename = new File(pathname); 
+						InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); 
+						BufferedReader br = new BufferedReader(reader); 
 						String line = "";
-//						line = br.readLine();
 						while ((line = br.readLine()) != null) {
 			                System.out.println(line);
 			            }
-						
-//						System.out.println(line);
-						
+												
 					} catch (IOException e) {
 			        }
 					break;
@@ -123,7 +118,7 @@ public class Presentation {
 							person[i].setGender(input_array[2]);
 							person[i].setID(Integer.valueOf(input_array[3]));
 							
-							// write into file
+							//* write into file
 							out.append("Create time: " + ft.format(dNow) + ", Identity: " + input3 + ", Name: " + input_array[0] + "， Age: " + input_array[1] + "  Gender: " + input_array[2]+ "  ID: " + input_array[3]);
 							out.newLine();
 						
