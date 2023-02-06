@@ -102,10 +102,9 @@ public class Presentation {
 		String name = "";
 		String species = "";
 		Scanner sc1 = new Scanner(System.in);
+		System.out.println("----- ポケモン登録 開始 -----");
 		
 		for (;;) {
-			
-			System.out.println("----- ポケモン登録 開始 -----");
 			
 			// TODO 機能のループ
 
@@ -187,9 +186,6 @@ public class Presentation {
 			
 			// TODO 機能のループ
 
-			
-			
-			
 			String input = sc1.nextLine();
 
 			if ("exit".equals(input)) {
