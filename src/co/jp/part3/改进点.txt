@@ -1,0 +1,6 @@
+和中期发表相比的改进点：
+1.Trainer类中记录队伍中宝可梦的array换成了map
+2.Trainer登录、Trainer退出、Pokemon登录以及解除登录的时间戳均写入日志文件。
+3.解除登录的Pokemon时增加了数量判定，数量为0时提示尚未有pokemon登录，不能解除
+4.和Pokemon玩时为找不到对应宝可梦的情况增加文字提示
+5.bug修复

@@ -1,0 +1,7 @@
+Timestamp,Event,Name,ID/Species
+2023-02-06 20:26:25,Trainer registered.,satoshi,227
+2023-02-06 20:27:17,Pokemon registered.,kame,Zenigame
+2023-02-06 20:27:59,Pokemon unregistered.,kame,Fushigidane
+2023-02-06 20:28:43,Pokemon registered.,kame2,Zenigame
+2023-02-06 20:30:36,Pokemon registered.,hono,Hitokage
+2023-02-06 20:31:06,Trainer exited.,satoshi,227
