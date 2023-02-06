@@ -1,0 +1,8 @@
+#,name,type,masterCode,age,health
+1,Max,BIRD,1,5,T
+2,Bella,DOG,1,12,F
+3,Charlie,CAT,1,1,F
+4,Lucy,BIRD,2,2,T
+5,Rocky,DOG,3,3,F
+6,Daisy,CAT,4,4,T
+7,Buddy,BIRD,4,5,T
