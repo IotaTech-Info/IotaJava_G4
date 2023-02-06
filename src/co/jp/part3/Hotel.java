@@ -211,13 +211,17 @@ public class Hotel {
 
 	public static void feed() {
 		for (Pet pet : pets) {
-			pet.eat();
+			if(pet.getStatus() == 1) {
+				pet.eat();					
+			}else{
+				System.out.println("没有宠物入住");
+			}
 		}
 	}
 	
 	public static void main(String[] args) {
 		System.out.println("欢迎光临");	
-		System.out.println("业务：1入住、2退房、3预约、4预约取消、5給食、6喂食、7结束系统");
+		System.out.println("业务：1入住、2退房、3预约、4预约取消、5打印信息、6喂食、7结束系统");
 
 		while (true) {
 			System.out.println("业务序号：");
@@ -242,9 +246,11 @@ public class Hotel {
 			case "5":
 				print();
 				System.out.println("返回主菜单");
+				break;
 			case "6":
 				feed();
 				System.out.println("返回主菜单");
+				break;
 			case "7":
 				System.out.println("结束");
 				return;
