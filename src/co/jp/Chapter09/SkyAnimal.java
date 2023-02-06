@@ -2,6 +2,11 @@ package co.jp.Chapter09;
 
 public abstract class SkyAnimal extends Animal {
 	
-  abstract void fly();
+  public SkyAnimal(String name) {
+		super(name);
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+abstract void fly();
 
 }
