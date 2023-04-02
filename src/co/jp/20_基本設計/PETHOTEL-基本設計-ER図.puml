@@ -12,6 +12,7 @@ package "PETHOTEL" <<rectangle>> {
       firstname : character varying
       birthday : character varying
       gender : character varying
+      company : character varying
       city : character varying
       create_datetime : timestamp without time zone
       update_datetime : timestamp without time zone
@@ -46,7 +47,7 @@ package "PETHOTEL" <<rectangle>> {
     login --|{ login_event
   }
 
-  package "checkin" <<rectangle>>{
+  package "RECORD" <<rectangle>>{
     ' テーブル
     entity "checkin_event"{
       + checkin_event_id [PK] : integer
@@ -55,11 +56,29 @@ package "PETHOTEL" <<rectangle>> {
       pet_id [FK] : integer
       room_no : integer
       checkin_date  : timestamp without time zone
-      checkout_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+    }
+    entity "checkout_event"{
+      + checkout_event_id [PK] : integer
+      ==
+      checkin_event_id [FK] : integer
+      create_datetime : timestamp without time zone
+    }
+    entity "booking_event"{
+      + booking_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
       reservation_checkin_date : timestamp without time zone
       reservation_checkout_date : timestamp without time zone
       create_datetime : timestamp without time zone
-      update_datetime : timestamp without time zone
+    }
+    entity "booking_cancel_event"{
+      + booking_cancel_event_id [PK] : integer
+      ==
+      booking_event_id [FK] : integer
+      create_datetime : timestamp without time zone
     }
 
   }
@@ -67,6 +86,9 @@ package "PETHOTEL" <<rectangle>> {
 
   ' リレーション
   userinfo --|{ checkin_event
+  userinfo --|{ checkout_event
+  userinfo --|{ booking_event
+  userinfo --|{ booking_cancel_event
 
 }
 @enduml
