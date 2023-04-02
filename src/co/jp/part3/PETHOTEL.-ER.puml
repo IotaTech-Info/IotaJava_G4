@@ -1,0 +1,111 @@
+@startuml
+
+skinparam monochrome true
+
+package "PETHOTEL" <<rectangle>> {
+  package "User" <<rectangle>> {
+    ' テーブル
+    entity "userinfo" {
+      + user_id [PK] : integer
+      ==
+      lastname : character varying
+      firstname : character varying
+      nickname : character varying
+      birthday : character varying
+      sex : character varying
+      city : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+      last_ip_address: character varying
+    }
+    entity "pet" {
+      + pet_id [PK] : integer
+      ==
+      user_id [FK] : character varying
+      pet_name : character varying
+      pet_type : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+      status: character varying
+    }
+    entity "login" {
+      + user_id [PK] : integer
+      ==
+      mail : character varying
+      password : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+    entity "login_event" {
+      + user_id [PK] : integer
+      + login_datetime [PK] : timestamp without time zone
+      ==
+      logout_datetime : timestamp without time zone
+    }
+
+    ' リレーション
+    userinfo ||--|| login
+    userinfo --|{ pet
+    login --|{ login_event
+  }
+
+  package "checkin" <<rectangle>>{
+    ' テーブル
+    entity "checkin_event"{
+      + checkin_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+      checkin_date  : timestamp without time zone
+      checkout_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+
+  }
+    package "checkout" <<rectangle>>{
+    ' テーブル
+    entity "checkout_event"{
+      + checkin_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+    }
+
+  }
+  package "booking" <<rectangle>>{
+    ' テーブル
+    entity "booking_event"{
+      + booking_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+      booking_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+
+  }
+    package "booking_cancel" <<rectangle>>{
+    ' テーブル
+    entity "booking_cancel_event"{
+      + booking_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+    }
+
+  }
+
+  ' リレーション
+  userinfo --|{ checkin_event
+  userinfo --|{ checkout_event
+  userinfo --|{ booking_event
+  userinfo --|{ booking_cancel_event
+
+}
+@enduml

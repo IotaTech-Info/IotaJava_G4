@@ -1,4 +1,4 @@
-package co.jp.finalPresentation;
+package co.jp.part2;
 
 public abstract class Pet {
     public String name;
@@ -39,4 +39,13 @@ public abstract class Pet {
 		System.out.println(this.type.getType() + "の" + this.name +"ちゃん");
 		System.out.print(",年齢:" + this.age + "歳です");
 	}
+
+    //質問６-１︓以下静的なメソッドを定義してください。
+    //1. メソッド名: megerArray
+    //2. 引数１︓intの配列 left
+    //3. 引数２︓intの配列 right
+    //4. 戻り値︓intの配列
+    //5. 処理内容︓引数left と 引数right をマージして、新しい配列を作成して返却する。
+	
+
 }

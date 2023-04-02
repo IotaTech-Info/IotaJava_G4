@@ -1,9 +1,7 @@
-package co.jp.finalPresentation;
-
+package co.jp.part2;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -11,6 +9,7 @@ import java.util.Scanner;
 public class Presentation {
 
 	public static void main(String[] args) {
+
 		// TODO 自動生成されたメソッド・スタブ
 
 		System.out.println("----- 実行開始 -----");
@@ -31,47 +30,60 @@ public class Presentation {
 		boolean search = false;
 		boolean action = false;
 		boolean pass_command = false;
+		int movement=0;//动作
+		int money=0;
+		int days=0;
+		
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("src/co/jp/part2/pets.txt"));
+			String line;
+			int i = 0;
+			while ((line = br.readLine()) != null) {
+				String[] input_array = line.split(" ");
 
-		for (;;) {
-			try {
-				BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("/Applications/Eclipse_2021-12.app/Contents/workspace/IotaJava_G4/src/co/jp/part2/pets.txt"),"UTF-8"));
-				String line;
-				int i = 0;
-				while ((line = br.readLine()) != null) {
-					String[] input_array = line.split(" ");
+				String[] inputName = input_array[0].split(":");
+				String[] inputAge = input_array[1].split(":");
+				String[] inputType = input_array[2].split(":");
+				if (inputName.length == 2 && inputAge.length == 2 && inputType.length == 2)
+					if (Integer.valueOf(inputAge[1]) > 0 && ("CAT".equals(inputType[1]) || "DOG".equals(inputType[1])
+							|| "BIRD".equals(inputType[1]))) {// 入力値の判断
 
-					String[] inputName = input_array[0].split(":");
-					String[] inputAge = input_array[1].split(":");
-					String[] inputType = input_array[2].split(":");
-					if (inputName.length == 2 && inputAge.length == 2 && inputType.length == 2)
-						if (Integer.valueOf(inputAge[1]) > 0 && ("CAT".equals(inputType[1]) || "DOG".equals(inputType[1])
-								|| "BIRD".equals(inputType[1]))) {// 入力値の判断
-
-							if ("NAME".equals(inputName[0])) {
-								name = inputName[1];
-							}
-
-							if ("AGE".equals(inputAge[0])) {
-								age = Integer.valueOf(inputAge[1]);
-							}
-
-							if ("TYPE".equals(inputType[0])) {
-								type = inputType[1];
-							}
+						if ("NAME".equals(inputName[0])) {
+							name = inputName[1];
 						}
-					count=i%4;
-					SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-					String dateString = simpleDateFormat.format(new Date());
-					// input 情報を収集できた時点
-					if (type.equals("DOG") || type.equals("CAT") || type.equals("BIRD")) {
-						hotel[count].checkin(name, age, type, age, count, dateString);
-					} else
-						System.out.println("TYPE範囲外のため、異常終了");
-				i++; }
-				br.close();
-				} catch (IOException e) {
-				    e.printStackTrace();
-				}
+
+						if ("AGE".equals(inputAge[0])) {
+							age = Integer.valueOf(inputAge[1]);
+						}
+
+						if ("TYPE".equals(inputType[0])) {
+							type = inputType[1];
+						}
+					}
+				count=i%4;
+				SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+				String dateString = simpleDateFormat.format(new Date());
+				// input 情報を収集できた時点
+				if (type.equals("DOG") || type.equals("CAT") || type.equals("BIRD")) {
+					hotel[count].checkin(name, age, type, age, count, dateString);
+				} else
+					System.out.println("TYPE範囲外のため、異常終了");
+			i++; }
+			br.close();
+			} catch (IOException e) {
+			    e.printStackTrace();
+			}
+		
+		
+		for (;;) {
+			if (movement!=0 && movement%5==0) {
+				movement=0;
+				days++;
+				money-=2500;
+			}
+			System.out.println("money:"+money+"days:"+days+"步数:"+movement+"/5");
+
 			
 			
 			if (display == true) {
@@ -196,7 +208,14 @@ public class Presentation {
 
 				}
 			}
-
+			if ("q".equals(input)) {
+				display = false;
+				help = true;
+				check = false;
+				checkout = false;
+				search = false;
+				pass_command = false;
+			}
 			String input2 = sc1.nextLine().trim();
 
 			if ("q".equals(input2)) {
@@ -289,6 +308,8 @@ public class Presentation {
 				}
 				action = false;
 				pass_command = false;
+				movement++;
+				money+=200;
 				continue;
 			}
 
@@ -371,6 +392,8 @@ public class Presentation {
 				} else
 					System.out.println("TYPE範囲外のため、異常終了");
 				// 初期化
+				movement+=2;
+				money+=500;
 				display = true;
 			} // if(check==true)
 
@@ -415,6 +438,7 @@ public class Presentation {
 				checkout = false;
 				pass_command = false;
 				Pet.COUNT--;
+				movement+=1;
 				continue;
 			}
 

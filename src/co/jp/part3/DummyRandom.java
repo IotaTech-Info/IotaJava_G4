@@ -1,4 +1,4 @@
-package co.jp.finalPresentation;
+package co.jp.part2;
 
 import java.util.Random;
 
