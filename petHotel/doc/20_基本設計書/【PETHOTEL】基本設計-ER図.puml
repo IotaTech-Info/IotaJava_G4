@@ -1,0 +1,118 @@
+@startuml
+
+skinparam monochrome true
+
+package "PETHOTEL" <<rectangle>> {
+  package "User" <<rectangle>> {
+    ' テーブル
+    entity "userinfo" {
+      + user_id [PK] : integer
+      ==
+      lastname : character varying
+      firstname : character varying
+      birthday : character varying
+      sex : character varying
+      city : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+    entity "pet" {
+      + pet_id [PK] : integer
+      ==
+      user_id [FK] : character varying
+      pet_name : character varying
+      pet_type : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+    entity "login" {
+      + user_id [PK] : integer
+      ==
+      mail : character varying
+      password : character varying
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+    entity "login_event" {
+      + user_id [PK] : integer
+      + login_datetime [PK] : timestamp without time zone
+      ==
+      logout_datetime : timestamp without time zone
+    }
+
+    ' リレーション
+    userinfo ||--|| login
+    userinfo --|{ pet
+    login --|{ login_event
+  }
+
+  package "checkin" <<rectangle>>{
+    ' テーブル
+    entity "checkin_event"{
+      + checkin_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+      checkin_date  : timestamp without time zone
+      checkout_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+
+  }
+
+  package "checkout" <<rectangle>>{
+    ' テーブル
+    entity "checkout_event"{
+      + checkout_event_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      room_no : integer
+      checkin_date  : timestamp without time zone
+      checkout_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+
+  }
+
+  package "book" <<rectangle>>{
+    ' テーブル
+    entity "book_event"{
+      + order_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      pet_type : character varying
+      age : integer
+      pet_name : character varying
+      price : float
+      checkin_date  : timestamp without time zone
+      checkout_date  : timestamp without time zone
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+  }
+
+  package "bookCancel" <<rectangle>>{
+    ' テーブル
+    entity "bookCancel_event"{
+      + order_id [PK] : integer
+      ==
+      user_id [FK] : integer
+      pet_id [FK] : integer
+      create_datetime : timestamp without time zone
+      update_datetime : timestamp without time zone
+    }
+  }
+  ' リレーション
+  userinfo --|{ checkin_event
+  userinfo --|{ checkout_event
+  userinfo --|{ book_event
+  userinfo --|{ bookCancel_event
+
+
+}
+@enduml
