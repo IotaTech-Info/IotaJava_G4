@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+<title>ログイン</title>
+  
+   </head>
+  
+   <body>
+  
+  <p>ログイン画面</p>
+ user: <input type="text"> value="123"
+ <br>
+ password:  <input type="password">value="123"
+<br>
+  <a href= "./register.html">新規登録</a>
+  
+  
+  </body>
